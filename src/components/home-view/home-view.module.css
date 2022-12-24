@@ -178,3 +178,29 @@
 .socials li:not(:first-of-type) {
   margin-left: 15px;
 }
+
+.callEmoji {
+  display: inline-block;
+  animation: emoji 3s ease 2s infinite;
+  margin-left: 3px;
+}
+
+@keyframes emoji {
+  0%,
+  30%,
+  100% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-30deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+}

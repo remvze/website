@@ -144,7 +144,7 @@ const HomeView = () => {
         </motion.p>
 
         <motion.h3 variants={variants} className={styles.label}>
-          Let&apos;s connect 🤙
+          Let&apos;s connect <span className={styles.callEmoji}>🤙</span>
         </motion.h3>
 
         <div>
