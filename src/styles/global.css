@@ -1,4 +1,6 @@
 :root {
+  --vh: 1vh;
+
   --accent: 124, 58, 237;
   --accent-gradient: linear-gradient(
     45deg,
