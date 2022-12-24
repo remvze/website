@@ -63,6 +63,30 @@ const HomeView = () => {
     },
   ];
 
+  const titleVariants = {
+    hide: {},
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0,
+      },
+    },
+  };
+
+  const blobVariants = {
+    hide: {
+      opacity: 0,
+      scale: 0,
+    },
+    show: {
+      opacity: 0.08,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
   const socialsVariants = {
     hide: {},
     show: {
@@ -92,20 +116,23 @@ const HomeView = () => {
       className={styles.wrapper}
     >
       <Container>
-        <motion.h1 variants={variants} className={styles.title}>
-          <p>
+        <motion.h1 variants={titleVariants} className={styles.title}>
+          <motion.p variants={variants}>
             <span>✱ Developer &</span>
             <br />
             <span>
               <i>Design</i> Technologist.
             </span>
-          </p>
+          </motion.p>
+
+          <motion.div variants={blobVariants} className={styles.blob} />
         </motion.h1>
 
         <motion.p variants={variants} className={styles.desc}>
-          A design-driven develop<span className={styles.orange}>✺</span>by day,
-          dedicated to crafting practical solutions with delightful experiences
-          through simple yet elegant design and scalable code. A curiour mind
+          A design-driven develop
+          <span className={styles.orange}>✺</span>by day, dedicated to crafting
+          practical solutions with delightful experiences through simple yet
+          elegant design and scalable code. A curiour mind
           <span className={styles.indigo}>✶</span>by night, philosophizing day
           to day life in order to make sense of it all and eventually
           <span className={styles.green}>✣</span>connect the dots.
