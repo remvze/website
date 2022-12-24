@@ -3,4 +3,67 @@
   height: calc(var(--vh) * 100);
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.4;
+}
+
+.title p {
+  display: inline-block;
+  background-color: #4158d0;
+  background-image: radial-gradient(
+    circle at bottom left,
+    #ffcc70 0,
+    #c850c0,
+    #4158d0 100%
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.title span i {
+  font-style: italic;
+}
+
+.desc {
+  color: #94a3b8;
+  margin-top: 15px;
+}
+
+.desc span {
+  display: inline-block;
+  margin: 0 5px;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.orange {
+  color: #fb923c;
+}
+
+.indigo {
+  color: #818cf8;
+}
+
+.green {
+  color: #4ade80;
 }
