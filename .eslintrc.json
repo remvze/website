@@ -1,0 +1,75 @@
+{
+  "env": {
+    "browser": true,
+    "amd": true,
+    "node": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:astro/recommended"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.d.ts"],
+      "parser": "@typescript-eslint/parser",
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "prettier"
+      ],
+      "plugins": ["@typescript-eslint", "prettier"]
+    },
+    {
+      "files": ["**/*.astro"],
+      "parser": "astro-eslint-parser",
+      "rules": {
+        "prettier/prettier": "error",
+        "react/no-unknown-property": "off"
+      }
+    },
+    {
+      "files": ["**/*.astro/*.js"],
+      "rules": {
+        "prettier/prettier": "off"
+      }
+    },
+    {
+      "files": ["**/*.mjs"],
+      "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2015
+      },
+      "rules": {
+        "prettier/prettier": "error",
+        "import/no-extraneous-dependencies": "off",
+        "import/no-unresolved": "off"
+      }
+    }
+  ]
+}
