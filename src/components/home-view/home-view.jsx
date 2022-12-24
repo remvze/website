@@ -63,30 +63,6 @@ const HomeView = () => {
     },
   ];
 
-  const titleVariants = {
-    hide: {},
-    show: {
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0,
-      },
-    },
-  };
-
-  const blobVariants = {
-    hide: {
-      opacity: 0,
-      scale: 0,
-    },
-    show: {
-      opacity: 0.1,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-      },
-    },
-  };
-
   const socialsVariants = {
     hide: {},
     show: {
@@ -100,7 +76,7 @@ const HomeView = () => {
   const iconVariants = {
     hide: {
       opacity: 0,
-      y: 30,
+      y: 20,
     },
     show: {
       opacity: 1,
@@ -116,16 +92,14 @@ const HomeView = () => {
       className={styles.wrapper}
     >
       <Container>
-        <motion.h1 variants={titleVariants} className={styles.title}>
-          <motion.p variants={variants}>
+        <motion.h1 variants={variants} className={styles.title}>
+          <p>
             <span>✱ Developer &</span>
             <br />
             <span>
               <i>Design</i> Technologist.
             </span>
-          </motion.p>
-
-          <motion.div variants={blobVariants} className={styles.blob} />
+          </p>
         </motion.h1>
 
         <motion.p variants={variants} className={styles.desc}>
