@@ -79,7 +79,7 @@ const HomeView = () => {
       scale: 0,
     },
     show: {
-      opacity: 0.08,
+      opacity: 0.1,
       scale: 1,
       transition: {
         duration: 0.6,

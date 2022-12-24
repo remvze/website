@@ -25,11 +25,11 @@
   height: 250px;
   background-color: #333;
   background-image: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
-  background-size: 1000% 1000%;
+  background-size: 850% 850%;
   animation: blob 20s linear infinite, blobColor 10s linear infinite;
   z-index: -1;
   filter: blur(50px);
-  opacity: 0.08;
+  opacity: 0.1;
 }
 
 @keyframes blobColor {
@@ -49,19 +49,19 @@
   }
   20% {
     border-radius: 30% 57% 31% 51% / 29% 61% 45% 61%;
-    transform: translate(-30%, 50%) rotate(90deg);
+    transform: translate(calc(-30% - 25px), calc(50% - 25px)) rotate(90deg);
   }
   40% {
     border-radius: 35% 70% 80% 39% / 93% 61% 45% 19%;
-    transform: translate(-30%, 50%) rotate(180deg);
+    transform: translate(calc(-30% - 25px), calc(50% + 25px)) rotate(180deg);
   }
   60% {
     border-radius: 61% 64% 50% 75% / 58% 84% 40% 77%;
-    transform: translate(-30%, 50%) rotate(270deg);
+    transform: translate(calc(-30% + 25px), calc(50% - 25px)) rotate(270deg);
   }
   80% {
     border-radius: 97% 38% 37% 28% / 90% 41% 87% 25%;
-    transform: translate(-30%, 50%) rotate(360deg);
+    transform: translate(calc(-30% + 25px), calc(50% + 25px)) rotate(360deg);
   }
   100% {
     border-radius: 69% 30% 30% 70% / 60% 40% 60% 40%;
