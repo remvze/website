@@ -1,5 +1,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import {
+  IoLogoInstagram,
+  IoLogoTwitter,
+  IoLogoGithub,
+  IoMail,
+} from 'react-icons/io5';
 
 import Container from '@/components/container';
 import Loader from '@/components/loader';
@@ -30,6 +36,50 @@ const HomeView = () => {
     show: {
       opacity: 1,
       x: 0,
+      y: 0,
+    },
+  };
+
+  const socials = [
+    {
+      name: 'GitHub',
+      icon: <IoLogoGithub />,
+      link: 'https://github.com/remvze',
+    },
+    {
+      name: 'Twitter',
+      icon: <IoLogoTwitter />,
+      link: 'https://twitter.com/remvze',
+    },
+    {
+      name: 'Instagram',
+      icon: <IoLogoInstagram />,
+      link: 'https://instagram.com/remvze',
+    },
+    {
+      name: 'Email',
+      icon: <IoMail />,
+      link: 'mailto:mvze@tuta.io',
+    },
+  ];
+
+  const socialsVariants = {
+    hide: {},
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const iconVariants = {
+    hide: {
+      opacity: 0,
+      y: 30,
+    },
+    show: {
+      opacity: 1,
       y: 0,
     },
   };
@@ -65,6 +115,20 @@ const HomeView = () => {
           Currently the founder of{' '}
           <a href="https://instagram.com/philosophors">✧ Philosophors</a>.
         </motion.p>
+
+        <motion.h3 variants={variants} className={styles.label}>
+          — Let&apos;s connect
+        </motion.h3>
+
+        <div>
+          <motion.ul variants={socialsVariants} className={styles.socials}>
+            {socials.map((social, i) => (
+              <motion.li variants={iconVariants} key={i}>
+                <a href={social.link}>{social.icon}</a>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </div>
       </Container>
     </motion.div>
   );

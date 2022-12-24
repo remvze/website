@@ -39,6 +39,27 @@
 .desc {
   color: #94a3b8;
   margin-top: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .title {
+    font-size: 25px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
 }
 
 .desc span {
@@ -66,4 +87,36 @@
 
 .green {
   color: #4ade80;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.socials {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.socials li a {
+  color: #94a3b8;
+  font-size: 19px;
+  transition: 0.3s;
+}
+
+.socials:hover li a {
+  color: #64748b;
+}
+
+.socials li a:hover {
+  color: #fefefe;
+}
+
+.socials li:not(:first-of-type) {
+  margin-left: 15px;
 }
