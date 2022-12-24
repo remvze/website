@@ -18,9 +18,12 @@
     "plugin:jsx-a11y/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:astro/recommended"
+    "plugin:astro/recommended",
+    "prettier"
   ],
+  "plugins": ["prettier"],
   "rules": {
+    "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off"
   },
   "settings": {
