@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "esnext",
+    "module": "esnext",
+    "importsNotUsedAsValues": "error",
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "preserveValueImports": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "checkJs": true,
+
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": "./src"
+  },
+  "exclude": ["node_modules", "dist", ".output"]
+}
