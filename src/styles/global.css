@@ -1,5 +1,8 @@
 :root {
   --vh: 1vh;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Space Grotesk', sans-serif;
 }
 
 *,
