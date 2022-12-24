@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import Container from '@/components/container';
 import Loader from '@/components/loader';
@@ -10,10 +11,38 @@ const HomeView = () => {
 
   if (loading) return <Loader show={loading} onEnd={() => setLoading(false)} />;
 
+  const containerVariants = {
+    hide: {},
+    show: {
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.4,
+      },
+    },
+  };
+
+  const variants = {
+    hide: {
+      opacity: 0,
+      x: -30,
+      y: 5,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+    },
+  };
+
   return (
-    <div className={styles.wrapper}>
+    <motion.div
+      variants={containerVariants}
+      initial="hide"
+      animate="show"
+      className={styles.wrapper}
+    >
       <Container>
-        <h1 className={styles.title}>
+        <motion.h1 variants={variants} className={styles.title}>
           <p>
             <span>✱ Developer &</span>
             <br />
@@ -21,23 +50,23 @@ const HomeView = () => {
               <i>Design</i> Technologist.
             </span>
           </p>
-        </h1>
+        </motion.h1>
 
-        <p className={styles.desc}>
+        <motion.p variants={variants} className={styles.desc}>
           A design-driven develop<span className={styles.orange}>✺</span>by day,
           dedicated to crafting practical solutions with delightful experiences
           through simple yet elegant design and scalable code. A curiour mind
           <span className={styles.indigo}>✶</span>by night, philosophizing day
           to day life in order to make sense of it all and eventually
           <span className={styles.green}>✣</span>connect the dots.
-        </p>
+        </motion.p>
 
-        <p className={styles.desc}>
+        <motion.p variants={variants} className={styles.desc}>
           Currently the founder of{' '}
           <a href="https://instagram.com/philosophors">✧ Philosophors</a>.
-        </p>
+        </motion.p>
       </Container>
-    </div>
+    </motion.div>
   );
 };
 
