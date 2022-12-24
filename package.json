@@ -11,7 +11,9 @@
     "astro": "astro",
     "lint": "eslint . --ext .js,.jsx,.astro",
     "lint:fix": "npm run lint -- --fix",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "prepare": "husky install",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@astrojs/react": "^1.2.2",
@@ -33,6 +35,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "8.0.2",
     "lint-staged": "13.1.0",
     "prettier": "2.8.1",
     "prettier-plugin-astro": "0.7.0"
