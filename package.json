@@ -14,7 +14,11 @@
     "format": "prettier . --write",
     "prepare": "husky install",
     "postinstall": "husky install",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "release": "standard-version --no-verify",
+    "release:major": "npm run release -- --release-as major",
+    "release:minor": "npm run release -- --release-as minor",
+    "release:patch": "npm run release -- --release-as patch"
   },
   "dependencies": {
     "@astrojs/react": "^1.2.2",
@@ -43,6 +47,7 @@
     "husky": "8.0.2",
     "lint-staged": "13.1.0",
     "prettier": "2.8.1",
-    "prettier-plugin-astro": "0.7.0"
+    "prettier-plugin-astro": "0.7.0",
+    "standard-version": "9.5.0"
   }
 }
