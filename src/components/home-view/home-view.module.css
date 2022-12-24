@@ -20,16 +20,16 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translate(-30%, 50%);
+  transform: translate(-35%, 50%);
   width: 250px;
   height: 250px;
   background-color: #333;
   background-image: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
   background-size: 850% 850%;
-  animation: blob 20s linear infinite, blobColor 10s linear infinite;
+  animation: blob 22s ease infinite, blobColor 8s ease infinite;
   z-index: -1;
   filter: blur(50px);
-  opacity: 0.1;
+  opacity: 0.125;
 }
 
 @keyframes blobColor {
@@ -45,27 +45,31 @@
 @keyframes blob {
   0% {
     border-radius: 69% 30% 30% 70% / 60% 40% 60% 40%;
-    transform: translate(-30%, 50%) rotate(0);
+    transform: translate(-35%, 50%) rotate(0) scale(1);
   }
   20% {
     border-radius: 30% 57% 31% 51% / 29% 61% 45% 61%;
-    transform: translate(calc(-30% - 25px), calc(50% - 25px)) rotate(90deg);
+    transform: translate(calc(-35% - 25px), calc(50% - 25px)) rotate(90deg)
+      scale(1.15);
   }
   40% {
     border-radius: 35% 70% 80% 39% / 93% 61% 45% 19%;
-    transform: translate(calc(-30% - 25px), calc(50% + 25px)) rotate(180deg);
+    transform: translate(calc(-35% - 25px), calc(50% + 25px)) rotate(180deg)
+      scale(0.9);
   }
   60% {
     border-radius: 61% 64% 50% 75% / 58% 84% 40% 77%;
-    transform: translate(calc(-30% + 25px), calc(50% - 25px)) rotate(270deg);
+    transform: translate(calc(-35% + 25px), calc(50% - 25px)) rotate(270deg)
+      scale(1.15);
   }
   80% {
     border-radius: 97% 38% 37% 28% / 90% 41% 87% 25%;
-    transform: translate(calc(-30% + 25px), calc(50% + 25px)) rotate(360deg);
+    transform: translate(calc(-35% + 25px), calc(50% + 25px)) rotate(360deg)
+      scale(0.9);
   }
   100% {
     border-radius: 69% 30% 30% 70% / 60% 40% 60% 40%;
-    transform: translate(-30%, 50%) rotate(360deg);
+    transform: translate(-35%, 50%) rotate(360deg) scale(1);
   }
 }
 
