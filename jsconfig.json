@@ -16,7 +16,10 @@
 
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
   "exclude": ["node_modules", "dist", ".output"]
 }
