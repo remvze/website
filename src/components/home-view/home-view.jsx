@@ -1,8 +1,15 @@
+import { useState } from 'react';
+
 import Container from '@/components/container';
+import Loader from '@/components/loader';
 
 import styles from './home-view.module.css';
 
 const HomeView = () => {
+  const [loading, setLoading] = useState(true);
+
+  if (loading) return <Loader show={loading} onEnd={() => setLoading(false)} />;
+
   return (
     <div className={styles.wrapper}>
       <Container>
