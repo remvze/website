@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/remvze/www/compare/v0.1.0...v0.1.1) (2022-12-24)
+
+
+### 🐛 Bug Fixes
+
+* add rules to ESLint ([3301b28](https://github.com/remvze/www/commit/3301b28e5f7bf6d7e6182c803a8d4e11043958a3))
+* fix react-icons build ([b26247d](https://github.com/remvze/www/commit/b26247dd83b403c5c0b8a1f353c14884caf77206))
+
+
+### 💄 Styling
+
+* increase display weight ([b0e8071](https://github.com/remvze/www/commit/b0e80719a0448714f1b2af496c34dc33745c569e))
+
 ## [0.1.0](https://github.com/remvze/www/compare/v0.0.1...v0.1.0) (2022-12-24)
 
 
