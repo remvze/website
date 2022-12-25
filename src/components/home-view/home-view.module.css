@@ -118,35 +118,6 @@
   letter-spacing: 1px;
 }
 
-.label .shine {
-  color: #fefefe;
-  mask-image: linear-gradient(
-    -60deg,
-    #000 33%,
-    rgba(0, 0, 0, 0.65) 50%,
-    #000 66%
-  );
-  mask-size: 300%;
-  -webkit-mask-image: linear-gradient(
-    -60deg,
-    #000 33%,
-    rgba(0, 0, 0, 0.65) 50%,
-    #000 66%
-  );
-  -webkit-mask-size: 300%;
-  animation: shine 6s ease 2s infinite;
-}
-
-@keyframes shine {
-  0% {
-    -webkit-mask-position: 100%;
-  }
-  30%,
-  100% {
-    -webkit-mask-position: 0%;
-  }
-}
-
 .socials {
   display: inline-flex;
   align-items: center;

@@ -185,8 +185,7 @@ const HomeView = () => {
         </AnimatePresence>
 
         <motion.h3 variants={variants} className={styles.label}>
-          <span className={styles.shine}>Let&apos;s connect</span>{' '}
-          <span className={styles.callEmoji}>🤙</span>
+          Let&apos;s connect <span className={styles.callEmoji}>🤙</span>
         </motion.h3>
 
         <div>
