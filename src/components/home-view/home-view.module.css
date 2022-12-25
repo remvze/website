@@ -42,6 +42,7 @@
   color: #94a3b8;
   margin-top: 15px;
   line-height: 1.7;
+  overflow: hidden;
 }
 
 @media (max-width: 500px) {
@@ -101,7 +102,7 @@
 
 .label {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   margin-top: 30px;
   letter-spacing: 1px;
@@ -156,4 +157,21 @@
   25% {
     transform: rotate(-30deg);
   }
+}
+
+.moreLess {
+  background-color: transparent;
+  display: block;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fefefe;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  overflow: hidden;
+  color: #cbd5e1;
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   IoLogoInstagram,
   IoLogoTwitter,
@@ -14,6 +14,7 @@ import styles from './home-view.module.css';
 
 const HomeView = () => {
   const [loading, setLoading] = useState(true);
+  const [showMore, setShowMore] = useState(false);
 
   if (loading) return <Loader show={loading} onEnd={() => setLoading(false)} />;
 
@@ -37,6 +38,32 @@ const HomeView = () => {
       opacity: 1,
       x: 0,
       y: 0,
+    },
+  };
+
+  const moreVariants = {
+    hide: {
+      opacity: 0,
+      height: 0,
+      marginTop: 0,
+    },
+    show: {
+      opacity: 1,
+      height: 'auto',
+      marginTop: 15,
+    },
+  };
+
+  const moreButtonVariants = {
+    hide: {
+      opacity: 0,
+      height: 0,
+      marginTop: 0,
+    },
+    show: {
+      opacity: 1,
+      height: 'auto',
+      marginTop: 5,
     },
   };
 
@@ -110,19 +137,53 @@ const HomeView = () => {
           <span className={styles.indigo}>✶</span>by night, philosophizing day
           to day life in order to make sense of it all and eventually
           <span className={styles.green}>✼</span>connect the dots.
+          <AnimatePresence initial={false}>
+            {!showMore && (
+              <motion.button
+                variants={moreButtonVariants}
+                initial="hide"
+                animate="show"
+                exit="hide"
+                className={styles.moreLess}
+                onClick={() => setShowMore(true)}
+              >
+                + More
+              </motion.button>
+            )}
+          </AnimatePresence>
         </motion.p>
 
-        <motion.p variants={variants} className={styles.desc}>
-          Currently the founder of{' '}
-          <a href="https://instagram.com/philosophors">✧ Philosophors</a>, and
-          the solo creator/designer of{' '}
-          <a href="https://github.com/remvze">1+ digital products</a> focused on
-          exploration of new ideas: from<span className={styles.red}>✯</span>
-          better ways to boost your productivity, to
-          <span className={styles.pink}>✴</span>simpler solutions for a more
-          private internet; all while maintaing an intuitive experience for
-          their users.
-        </motion.p>
+        <AnimatePresence>
+          {showMore && (
+            <motion.p
+              variants={moreVariants}
+              initial="hide"
+              animate="show"
+              exit="hide"
+              transition={{ ease: 'easeOut' }}
+              className={styles.desc}
+            >
+              Currently the founder of{' '}
+              <a href="https://instagram.com/philosophors">✧ Philosophors</a>,
+              and the solo creator/designer of{' '}
+              <a href="https://github.com/remvze">1+ digital products</a>{' '}
+              focused on exploration of new ideas: from
+              <span className={styles.red}>✯</span>
+              better ways to boost your productivity, to
+              <span className={styles.pink}>✴</span>simpler solutions for a more
+              private internet; all while maintaing an intuitive experience for
+              their users.{' '}
+              {showMore && (
+                <button
+                  className={styles.moreLess}
+                  onClick={() => setShowMore(false)}
+                >
+                  - Less
+                </button>
+              )}
+            </motion.p>
+          )}
+        </AnimatePresence>
 
         <motion.h3 variants={variants} className={styles.label}>
           Let&apos;s connect <span className={styles.callEmoji}>🤙</span>
