@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/remvze/www/compare/v0.1.2...v0.2.0) (2022-12-25)
+
+
+### ✨ Features
+
+* add projects text ([06a1d80](https://github.com/remvze/www/commit/06a1d80ad1fffbda823f90c9a0ebae4481e68434))
+
+
+### 💄 Styling
+
+* change container size ([71edd2b](https://github.com/remvze/www/commit/71edd2b8376f75388b6155b0d25ab45f6ead6182))
+
+
+### 🐛 Bug Fixes
+
+* correct auto height ([8a1f398](https://github.com/remvze/www/commit/8a1f398434ceed3f207e3a9cb972ac7a60705424))
+
 ### [0.1.2](https://github.com/remvze/www/compare/v0.1.1...v0.1.2) (2022-12-25)
 
 
