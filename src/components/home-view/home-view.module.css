@@ -78,6 +78,7 @@
   display: inline-block;
   margin: 0 5px;
   animation: rotate 3s linear infinite;
+  user-select: none;
 }
 
 @keyframes rotate {
@@ -128,6 +129,7 @@
   color: #94a3b8;
   font-size: 19px;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .socials:hover li a {
@@ -136,6 +138,7 @@
 
 .socials li a:hover {
   color: #fefefe;
+  transform: scale(1.05);
 }
 
 .socials li:not(:first-of-type) {

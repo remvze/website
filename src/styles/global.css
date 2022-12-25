@@ -5,6 +5,11 @@
   --font-body: 'Space Grotesk', sans-serif;
 }
 
+::selection {
+  background-color: rgba(68, 68, 68, 0.3);
+  color: #fefefe;
+}
+
 *,
 *::before,
 *::after {
