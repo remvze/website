@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/remvze/www/compare/v0.1.1...v0.1.2) (2022-12-25)
+
+
+### ✨ Features
+
+* add blob ([695c35b](https://github.com/remvze/www/commit/695c35b4a349913f7479a8f4261e5f85373ab6b1))
+
+
+### 🐛 Bug Fixes
+
+* fix typos ([656598c](https://github.com/remvze/www/commit/656598c2cbe7f2615fb9d946395d3dd17d780a39))
+
+
+### 💄 Styling
+
+* add emoji animation ([966e38a](https://github.com/remvze/www/commit/966e38aad861067a9abdfe240a3c0765908ccd65))
+* add emoji for connect ([893e66b](https://github.com/remvze/www/commit/893e66b675660d63dd8360649af05961fecb8128))
+* change blob animation ([3ec4d3f](https://github.com/remvze/www/commit/3ec4d3f6e659d174e112bd9681a5b8cd60c04cf3))
+* change blob styles ([20a654c](https://github.com/remvze/www/commit/20a654c3d9ee7896d94fef035e4846aef08bd72b))
+* increase font weight ([e1bb3c1](https://github.com/remvze/www/commit/e1bb3c1e683eb58913f853eb11235866a9ceff37))
+* remove blob ([5137e8b](https://github.com/remvze/www/commit/5137e8b721cdb6299fb5410415f55288f9b7f3fa))
+
 ### [0.1.1](https://github.com/remvze/www/compare/v0.1.0...v0.1.1) (2022-12-24)
 
 
