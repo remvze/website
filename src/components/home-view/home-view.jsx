@@ -147,7 +147,7 @@ const HomeView = () => {
                 className={styles.moreLess}
                 onClick={() => setShowMore(true)}
               >
-                + More
+                [More]
               </motion.button>
             )}
           </AnimatePresence>
@@ -177,7 +177,7 @@ const HomeView = () => {
                   className={styles.moreLess}
                   onClick={() => setShowMore(false)}
                 >
-                  - Less
+                  [Less]
                 </button>
               )}
             </motion.p>
@@ -185,7 +185,8 @@ const HomeView = () => {
         </AnimatePresence>
 
         <motion.h3 variants={variants} className={styles.label}>
-          Let&apos;s connect <span className={styles.callEmoji}>🤙</span>
+          <span className={styles.shine}>Let&apos;s connect</span>{' '}
+          <span className={styles.callEmoji}>🤙</span>
         </motion.h3>
 
         <div>
