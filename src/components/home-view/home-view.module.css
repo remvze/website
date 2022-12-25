@@ -179,12 +179,10 @@
   border: none;
   outline: none;
   cursor: pointer;
-  color: #fefefe;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 5px;
-  overflow: hidden;
+  margin-top: 10px;
   color: #e2e8f0;
 }

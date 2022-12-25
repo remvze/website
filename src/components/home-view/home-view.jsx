@@ -54,16 +54,18 @@ const HomeView = () => {
     },
   };
 
-  const moreButtonVariants = {
+  const moreLessVariants = {
     hide: {
       opacity: 0,
-      height: 0,
-      marginTop: 0,
+      x: -20,
     },
     show: {
       opacity: 1,
-      height: 'auto',
-      marginTop: 5,
+      x: 0,
+    },
+    exit: {
+      opacity: 0,
+      x: 20,
     },
   };
 
@@ -137,20 +139,6 @@ const HomeView = () => {
           <span className={styles.indigo}>✶</span>by night, philosophizing day
           to day life in order to make sense of it all and eventually
           <span className={styles.green}>✼</span>connect the dots.
-          <AnimatePresence initial={false}>
-            {!showMore && (
-              <motion.button
-                variants={moreButtonVariants}
-                initial="hide"
-                animate="show"
-                exit="hide"
-                className={styles.moreLess}
-                onClick={() => setShowMore(true)}
-              >
-                + More
-              </motion.button>
-            )}
-          </AnimatePresence>
         </motion.p>
 
         <AnimatePresence>
@@ -172,17 +160,32 @@ const HomeView = () => {
               your productivity,<span className={styles.pink}>✴</span>to simpler
               solutions for a more private internet; all while maintaining an
               intuitive experience for their users.
-              {showMore && (
-                <button
-                  className={styles.moreLess}
-                  onClick={() => setShowMore(false)}
-                >
-                  - Less
-                </button>
-              )}
             </motion.p>
           )}
         </AnimatePresence>
+
+        <motion.button
+          className={styles.moreLess}
+          onClick={() => setShowMore(prev => !prev)}
+          variants={variants}
+        >
+          <AnimatePresence initial={false} mode="wait">
+            <motion.span
+              variants={moreLessVariants}
+              initial="hide"
+              animate="show"
+              exit="exit"
+              style={{ display: 'block' }}
+              key={showMore}
+              transition={{
+                duration: 0.15,
+                ease: 'easeInOut',
+              }}
+            >
+              Read {showMore ? 'Less' : 'More'}
+            </motion.span>
+          </AnimatePresence>
+        </motion.button>
 
         <motion.h3 variants={variants} className={styles.label}>
           Let&apos;s connect <span className={styles.callEmoji}>🤙</span>
