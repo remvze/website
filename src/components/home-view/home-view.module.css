@@ -43,6 +43,15 @@
   margin-top: 15px;
   line-height: 1.7;
   overflow: hidden;
+  transition: color 0.3s;
+}
+
+.desc a {
+  display: inline-block;
+}
+
+.desc:has(a:hover) {
+  color: #64748b;
 }
 
 @media (max-width: 500px) {

@@ -166,8 +166,8 @@ const HomeView = () => {
               Currently the founder of{' '}
               <a href="https://instagram.com/philosophors">✧ Philosophors</a>,
               and the indie maker of{' '}
-              <a href="https://github.com/remvze">1+ digital products</a>{' '}
-              focused on exploration of new ideas:
+              <a href="https://github.com/remvze">digital products</a> focused
+              on exploration of new ideas:
               <span className={styles.red}>✯</span>from better ways to boost
               your productivity,<span className={styles.pink}>✴</span>to simpler
               solutions for a more private internet; all while maintaining an
