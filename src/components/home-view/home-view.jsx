@@ -109,12 +109,19 @@ const HomeView = () => {
           elegant design and scalable code. A curious mind
           <span className={styles.indigo}>✶</span>by night, philosophizing day
           to day life in order to make sense of it all and eventually
-          <span className={styles.green}>✣</span>connect the dots.
+          <span className={styles.green}>✼</span>connect the dots.
         </motion.p>
 
         <motion.p variants={variants} className={styles.desc}>
           Currently the founder of{' '}
-          <a href="https://instagram.com/philosophors">✧ Philosophors</a>.
+          <a href="https://instagram.com/philosophors">✧ Philosophors</a>, and
+          the solo creator/designer of{' '}
+          <a href="https://github.com/remvze">1+ digital products</a> focused on
+          exploration of new ideas: from<span className={styles.red}>❄</span>
+          better ways to boost your productivity, to
+          <span className={styles.pink}>✴</span>simpler solutions for a more
+          private internet; all while maintaing an intuitive experience for
+          their users.
         </motion.p>
 
         <motion.h3 variants={variants} className={styles.label}>
