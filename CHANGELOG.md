@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/remvze/www/compare/v0.2.0...v0.3.0) (2022-12-25)
+
+
+### ✨ Features
+
+* add more/less button ([93befc1](https://github.com/remvze/www/commit/93befc146f15ee90bf533305a9bc7b3e4c7e2e1d))
+
+
+### 💄 Styling
+
+* change symbol ([051477f](https://github.com/remvze/www/commit/051477fa6c73f2f4b3121716bbdf5d31f41d2c39))
+* relocate symbols ([67bdd26](https://github.com/remvze/www/commit/67bdd2635dba5ec1866267c9de89e937abbb4c7b))
+
+
+### 🐛 Bug Fixes
+
+* change copy ([52c4fe5](https://github.com/remvze/www/commit/52c4fe5e524121cf760ee70a2ab27e1cadc666b6))
+
 ## [0.2.0](https://github.com/remvze/www/compare/v0.1.2...v0.2.0) (2022-12-25)
 
 
