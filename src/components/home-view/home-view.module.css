@@ -121,27 +121,27 @@
 .label .shine {
   color: #fefefe;
   mask-image: linear-gradient(
-    -45deg,
-    rgba(0, 0, 0, 0.7) 33%,
-    #888 50%,
-    rgba(0, 0, 0, 0.7) 66%
+    -60deg,
+    #000 33%,
+    rgba(0, 0, 0, 0.65) 50%,
+    #000 66%
   );
   mask-size: 300%;
   -webkit-mask-image: linear-gradient(
-    -45deg,
+    -60deg,
     #000 33%,
-    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.65) 50%,
     #000 66%
   );
   -webkit-mask-size: 300%;
-  animation: shine 4s ease 2s infinite;
+  animation: shine 6s ease 2s infinite;
 }
 
 @keyframes shine {
   0% {
     -webkit-mask-position: 100%;
   }
-  40%,
+  30%,
   100% {
     -webkit-mask-position: 0%;
   }

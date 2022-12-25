@@ -147,7 +147,7 @@ const HomeView = () => {
                 className={styles.moreLess}
                 onClick={() => setShowMore(true)}
               >
-                [More]
+                + More
               </motion.button>
             )}
           </AnimatePresence>
@@ -177,7 +177,7 @@ const HomeView = () => {
                   className={styles.moreLess}
                   onClick={() => setShowMore(false)}
                 >
-                  [Less]
+                  - Less
                 </button>
               )}
             </motion.p>
