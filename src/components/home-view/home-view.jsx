@@ -167,12 +167,11 @@ const HomeView = () => {
               <a href="https://instagram.com/philosophors">✧ Philosophors</a>,
               and the solo creator/designer of{' '}
               <a href="https://github.com/remvze">1+ digital products</a>{' '}
-              focused on exploration of new ideas: from
-              <span className={styles.red}>✯</span>
-              better ways to boost your productivity, to
-              <span className={styles.pink}>✴</span>simpler solutions for a more
-              private internet; all while maintaing an intuitive experience for
-              their users.{' '}
+              focused on exploration of new ideas:
+              <span className={styles.red}>✯</span>from better ways to boost
+              your productivity,<span className={styles.pink}>✴</span>to simpler
+              solutions for a more private internet; all while maintaing an
+              intuitive experience for their users.{' '}
               {showMore && (
                 <button
                   className={styles.moreLess}
