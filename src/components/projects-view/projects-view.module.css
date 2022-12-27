@@ -1,0 +1,61 @@
+.wrapper {
+  padding: 150px 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.4;
+  color: #f8fafc;
+}
+
+.desc {
+  color: #94a3b8;
+  margin-top: 5px;
+  line-height: 1.7;
+}
+
+.projects {
+  margin-top: 50px;
+}
+
+.projectContainer {
+  margin-bottom: 35px;
+  display: flex;
+}
+
+.projectInfo {
+  padding-left: 20px;
+}
+
+.projectName {
+  color: #f8fafc;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.projectDesc {
+  color: #94a3b8;
+  position: relative;
+  top: -2px;
+  font-size: 15px;
+}
+
+.projectLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #202020;
+  position: relative;
+  z-index: 2;
+  border-radius: 15px;
+  box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.15),
+    inset 5px 5px 10px rgba(255, 255, 255, 0.02);
+}
+
+.projectLogo img {
+  width: 50%;
+}
