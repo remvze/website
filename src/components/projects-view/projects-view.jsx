@@ -15,7 +15,7 @@ const ProjectsView = () => {
     {
       name: 'Pice',
       desc: 'The password generator you need.',
-      link: 'https://moice.run',
+      link: null,
       logo: '/images/moice.svg',
     },
   ];
@@ -37,6 +37,17 @@ const ProjectsView = () => {
               <div className={styles.projectInfo}>
                 <h3 className={styles.projectName}>{project.name}</h3>
                 <p className={styles.projectDesc}>{project.desc}</p>
+                {project.link ? (
+                  <a className={styles.projectLink} href={project.link}>
+                    <div className={styles.visit}>
+                      <span>Visit</span>
+                      <span>Visit</span>
+                    </div>{' '}
+                    <span className={styles.arrow}>→</span>
+                  </a>
+                ) : (
+                  <p className={styles.comingSoon}>Coming Soon</p>
+                )}
               </div>
             </div>
           ))}

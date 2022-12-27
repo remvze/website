@@ -38,7 +38,7 @@
 .projectDesc {
   color: #94a3b8;
   position: relative;
-  top: -2px;
+  top: -3px;
   font-size: 15px;
 }
 
@@ -48,14 +48,70 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  background-color: #202020;
+  background-color: #282828;
+  border: 1px solid #383838;
   position: relative;
   z-index: 2;
-  border-radius: 15px;
-  box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.15),
-    inset 5px 5px 10px rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
 }
 
 .projectLogo img {
   width: 50%;
+}
+
+.projectLink {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  color: #e2e8f0;
+  transition: 0.3s;
+}
+
+.projectLink:hover {
+  color: #f8fafc;
+}
+
+.projectLink .visit {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1.25;
+  max-height: 1.25em;
+  margin-right: 5px;
+}
+
+.projectLink .visit span {
+  display: block;
+  transform: translateY(0);
+  transition: 0.3s;
+}
+
+.projectLink:hover .visit span {
+  transform: translateY(-100%);
+}
+
+.projectLink span {
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.projectLink:hover span {
+  transform: translateX(4px);
+}
+
+.comingSoon {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  color: #f8fafc;
+  background-color: rgba(37, 99, 235, 0.4);
+  border: 1px solid #2563eb;
+  padding: 3px 13px;
+  border-radius: 100px;
 }
