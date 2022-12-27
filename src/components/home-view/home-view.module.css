@@ -19,19 +19,30 @@
 
 .title p {
   display: inline-block;
-  background-color: #4158d0;
-  background-image: radial-gradient(
-    circle at bottom left,
-    #ffcc70 0,
-    #c850c0,
-    #4158d0 100%
+  background-color: #f8fafc;
+  background-image: linear-gradient(
+    -45deg,
+    transparent 33%,
+    rgba(148, 163, 184, 0.75) 55%,
+    transparent 66%
   );
-  background-size: 100%;
+  background-size: 300% 300%;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  animation: shine 6s ease-out 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: right;
+  }
+  20%,
+  100% {
+    background-position: left;
+  }
 }
 
 .title span i {
@@ -184,5 +195,5 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 10px;
-  color: #e2e8f0;
+  color: #f8fafc;
 }
