@@ -56,18 +56,17 @@
 }
 
 .projectLogo img {
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
 }
 
 .projectLink {
   display: inline-flex;
   align-items: center;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 5px;
   color: #e2e8f0;
   transition: 0.3s;
 }
@@ -109,7 +108,6 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 5px;
   color: #f8fafc;
   background-color: rgba(37, 99, 235, 0.4);
   border: 1px solid #2563eb;
