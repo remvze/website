@@ -159,7 +159,6 @@
 .callEmoji {
   display: inline-block;
   animation: emoji 3s ease 2s infinite;
-  margin-left: 3px;
   user-select: none;
 }
 

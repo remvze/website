@@ -204,7 +204,7 @@ const HomeView = () => {
 
         <div className={styles.socialsContainer}>
           <motion.div variants={emojiVariants} className={styles.socialsEmoji}>
-            <span className={styles.callEmoji}>📞</span>
+            <span className={styles.callEmoji}>🤙</span>
           </motion.div>
           <motion.ul variants={socialsVariants} className={styles.socials}>
             {socials.map((social, i) => (
