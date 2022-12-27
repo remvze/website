@@ -197,7 +197,7 @@ const HomeView = () => {
                 ease: 'easeInOut',
               }}
             >
-              Read {showMore ? 'Less' : 'More'}
+              {showMore ? 'Show Less' : 'Read More'}
             </motion.span>
           </AnimatePresence>
         </motion.button>
