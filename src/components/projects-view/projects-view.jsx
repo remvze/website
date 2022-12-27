@@ -16,7 +16,7 @@ const ProjectsView = () => {
       name: 'Pice',
       desc: 'The password generator you need.',
       link: null,
-      logo: '/images/moice.svg',
+      logo: '/images/pice.svg',
     },
   ];
 

@@ -52,11 +52,12 @@
   border: 1px solid #383838;
   position: relative;
   z-index: 2;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .projectLogo img {
   width: 50%;
+  height: 50%;
 }
 
 .projectLink {
