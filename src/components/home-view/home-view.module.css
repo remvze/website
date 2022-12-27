@@ -133,7 +133,7 @@
   display: inline-flex;
   align-items: center;
   list-style: none;
-  margin-top: 10px;
+  padding: 0 15px;
 }
 
 .socials li a {
@@ -196,4 +196,23 @@
   letter-spacing: 1px;
   margin-top: 10px;
   color: #f8fafc;
+}
+
+.socialsContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  line-height: 1;
+}
+
+.socialsEmoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background-color: #f8fafc;
+  font-size: 13px;
+  line-height: 0;
 }

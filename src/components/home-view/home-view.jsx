@@ -92,6 +92,21 @@ const HomeView = () => {
     },
   ];
 
+  const emojiVariants = {
+    hide: {
+      opacity: 0,
+      scale: 0,
+    },
+    show: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.2,
+        ease: 'easeInOut',
+      },
+    },
+  };
+
   const socialsVariants = {
     hide: {},
     show: {
@@ -187,11 +202,10 @@ const HomeView = () => {
           </AnimatePresence>
         </motion.button>
 
-        <motion.h3 variants={variants} className={styles.label}>
-          Let&apos;s connect <span className={styles.callEmoji}>🤙</span>
-        </motion.h3>
-
-        <div>
+        <div className={styles.socialsContainer}>
+          <motion.div variants={emojiVariants} className={styles.socialsEmoji}>
+            <span className={styles.callEmoji}>📞</span>
+          </motion.div>
           <motion.ul variants={socialsVariants} className={styles.socials}>
             {socials.map((social, i) => (
               <motion.li variants={iconVariants} key={i}>
