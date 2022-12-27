@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/remvze/website/compare/v0.3.0...v0.4.0) (2022-12-27)
+
+
+### 🚚 Chores
+
+* rename package name ([6f9f7f5](https://github.com/remvze/website/commit/6f9f7f527733caa731363f4961645837568aabb3))
+
+
+### 💄 Styling
+
+* add animation to emoji box ([a96fa26](https://github.com/remvze/website/commit/a96fa26f15f3c35ed32836c198cf3bf94cbd3beb))
+* add better shining ([a05b212](https://github.com/remvze/website/commit/a05b212a651331f51c53344ebd17cd479001ad8d))
+* better link hover effect ([2913509](https://github.com/remvze/website/commit/291350910bbdc2b187e06588c9fa4c0ffb6acb29))
+* better selection style ([629528a](https://github.com/remvze/website/commit/629528adcb3e7fdfc9c4035a2cd29776f1592e7f))
+* change socials style ([abb9fc6](https://github.com/remvze/website/commit/abb9fc67c5ba24a9ba086a510a677f60eb3b09b0))
+* improve small details ([d5ba1c8](https://github.com/remvze/website/commit/d5ba1c810cab1fe2c7d716f2d8c029b4b9911d3e))
+* more/less new animation ([415fd06](https://github.com/remvze/website/commit/415fd068fd37930cf18036ad7263ddfcb0c21382))
+* remove gradient ([481ced9](https://github.com/remvze/website/commit/481ced980460291b79e244d34df2d9ccca7509f5))
+* remove shining effect ([cf2e7cf](https://github.com/remvze/website/commit/cf2e7cf0440844412a8e1c81c7c2699bff9eeabe))
+
+
+### 🐛 Bug Fixes
+
+* change emoji and position ([5971795](https://github.com/remvze/website/commit/5971795cc12205d33221f470b083a5ad54d1c8bd))
+* change more/less copy ([dc185a7](https://github.com/remvze/website/commit/dc185a76e7d34802dd1874bea40491d0ae8cf8cc))
+* improve copy ([13c86f7](https://github.com/remvze/website/commit/13c86f7e84cb51e68578329f40f666350fceacb1))
+* noise texture path ([7d8f3cb](https://github.com/remvze/website/commit/7d8f3cb4a205217f6563610c7cd0aeb0ba427729))
+* self host noise texture ([75231e2](https://github.com/remvze/website/commit/75231e272eb74ec5d1245936e70af57888acc21b))
+
 ## [0.3.0](https://github.com/remvze/www/compare/v0.2.0...v0.3.0) (2022-12-25)
 
 
