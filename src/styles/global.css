@@ -27,9 +27,6 @@ body {
   line-height: 1.6;
   font-family: var(--font-body);
   font-size: 16px;
-  background-image: radial-gradient(circle at center, #131313, #090909);
-  background-position: center;
-  background-attachment: fixed;
 }
 
 a {
