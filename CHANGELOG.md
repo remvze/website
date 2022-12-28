@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/remvze/website/compare/v0.4.0...v0.4.1) (2022-12-28)
+
+
+### ✨ Features
+
+* add new project logo ([c1d5525](https://github.com/remvze/website/commit/c1d5525229ecc91b7f8b2087e8d238451a93d61d))
+* add project link ([ce94562](https://github.com/remvze/website/commit/ce945622edf6867ad9907ee8981886cf5cf1432f))
+* add projects base page ([825d540](https://github.com/remvze/website/commit/825d5405bd6d97d47b770938a25fd7026d2f6a22))
+* implement base project card ([9906aaf](https://github.com/remvze/website/commit/9906aafb35ccd17ea05b7e6ec5b3e6032764376e))
+
+
+### 💄 Styling
+
+* add animations ([0d29f8c](https://github.com/remvze/website/commit/0d29f8ce2c7ba67028a067561a22be680a726aaf))
+* add hover effect ([bd8bcd7](https://github.com/remvze/website/commit/bd8bcd77e891e7a8135f5a25b54026e933051b4c))
+* add more details ([b8f0ea5](https://github.com/remvze/website/commit/b8f0ea5035e95c99ddb04f61565c07c9151fbe89))
+* add radial gradient ([a962b92](https://github.com/remvze/website/commit/a962b92bea09d981f11a20e3acd6fc79671e7a65))
+* change copy ([c159693](https://github.com/remvze/website/commit/c15969394a550ff159b0699bcd98b8ca67783a62))
+* change fonts ([7bac0cc](https://github.com/remvze/website/commit/7bac0cc17a0133022b6348d5a805e47ce378e33f))
+* decrease margin ([00ca4f2](https://github.com/remvze/website/commit/00ca4f24348666dfb75e07a683651a18e3ad6e8a))
+* increase margin ([c3722dc](https://github.com/remvze/website/commit/c3722dc0943d9f9895a61d179f23fa9e99c591c8))
+* remove gradient ([fa33997](https://github.com/remvze/website/commit/fa339977f484aa5e97bc4d22d50e4a15e46f8a8c))
+
 ## [0.4.0](https://github.com/remvze/website/compare/v0.3.0...v0.4.0) (2022-12-27)
 
 
