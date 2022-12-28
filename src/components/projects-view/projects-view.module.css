@@ -71,7 +71,7 @@
   letter-spacing: 1px;
   color: #e2e8f0;
   transition: 0.3s;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .projectLink:hover {
@@ -116,5 +116,5 @@
   border: 1px solid #2563eb;
   padding: 3px 13px;
   border-radius: 100px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
