@@ -55,7 +55,7 @@ const ProjectsView = () => {
           Projects
         </motion.h1>
         <motion.p variants={variants} className={styles.desc}>
-          A collection of carefully crafted products.
+          Carefully crafted, tastefully polished.
         </motion.p>
 
         <div className={styles.projects}>
