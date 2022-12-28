@@ -190,6 +190,7 @@ const HomeView = () => {
               initial="hide"
               animate="show"
               exit="exit"
+              whileHover={{ x: 3 }}
               style={{ display: 'block' }}
               key={showMore}
               transition={{
