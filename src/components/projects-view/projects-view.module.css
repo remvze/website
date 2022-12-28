@@ -31,15 +31,17 @@
 
 .projectName {
   color: #f8fafc;
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 600;
+  letter-spacing: 1px;
+  font-family: var(--font-display);
+  line-height: 1;
 }
 
 .projectDesc {
   color: #94a3b8;
-  position: relative;
-  top: -4px;
   font-size: 15px;
+  margin-top: 5px;
 }
 
 .projectLogo {
@@ -56,19 +58,20 @@
 }
 
 .projectLogo img {
-  width: 40%;
-  height: 40%;
+  width: 45%;
+  height: 45%;
 }
 
 .projectLink {
   display: inline-flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #e2e8f0;
   transition: 0.3s;
+  margin-top: 5px;
 }
 
 .projectLink:hover {
@@ -105,7 +108,7 @@
 .comingSoon {
   display: inline-block;
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #f8fafc;
@@ -113,4 +116,5 @@
   border: 1px solid #2563eb;
   padding: 3px 13px;
   border-radius: 100px;
+  margin-top: 5px;
 }
