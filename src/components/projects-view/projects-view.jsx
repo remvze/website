@@ -55,7 +55,8 @@ const ProjectsView = () => {
           Projects
         </motion.h1>
         <motion.p variants={variants} className={styles.desc}>
-          Carefully crafted, tastefully polished.
+          <span className={styles.indigo}>✺</span>Carefully crafted.
+          <span className={styles.green}>✴</span>Tastefully polished.
         </motion.p>
 
         <div className={styles.projects}>

@@ -16,6 +16,42 @@
   line-height: 1.7;
 }
 
+.desc span {
+  display: inline-block;
+  margin: 0 5px;
+  animation: rotate 3s linear infinite;
+  user-select: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.orange {
+  color: #fb923c;
+}
+
+.indigo {
+  color: #818cf8;
+}
+
+.green {
+  color: #4ade80;
+}
+
+.pink {
+  color: #ec4899;
+}
+
+.red {
+  color: #f87171;
+}
+
 .projects {
   margin-top: 50px;
 }
@@ -26,7 +62,7 @@
 }
 
 .projectInfo {
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .projectName {
@@ -48,13 +84,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   background-color: #282828;
   border: 1px solid #383838;
   position: relative;
   z-index: 2;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .projectLogo img {
