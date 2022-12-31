@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import {
   IoLogoInstagram,
   IoLogoTwitter,
@@ -9,6 +9,13 @@ import {
 import styles from './header.module.css';
 
 const Header = () => {
+  const { scrollY } = useScroll();
+  const rotate = useSpring(scrollY, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   const socials = [
     {
       name: 'GitHub',
@@ -67,7 +74,7 @@ const Header = () => {
       className={styles.header}
     >
       <motion.h2 variants={variants} className={styles.logo}>
-        ✱ Maze
+        <motion.span style={{ rotate }}>✱</motion.span> Maze
       </motion.h2>
 
       <motion.ul className={styles.socials}>

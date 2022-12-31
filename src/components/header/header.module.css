@@ -24,6 +24,15 @@
   font-size: 12px;
   letter-spacing: 1px;
   color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo span {
+  display: block;
+  letter-spacing: 0;
+  line-height: 0;
 }
 
 .socials {
