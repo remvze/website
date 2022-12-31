@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/remvze/website/compare/v0.4.1...v0.5.0) (2022-12-31)
+
+
+### 💄 Styling
+
+* major redesign ([1e708b4](https://github.com/remvze/website/commit/1e708b42e5ead284349ffddc0be877b2deaeb1bb))
+
+
+### ✨ Features
+
+* add header ([5fc5aa0](https://github.com/remvze/website/commit/5fc5aa030729ee4e6afdb7fa69a445990b243092))
+
 ### [0.4.1](https://github.com/remvze/website/compare/v0.4.0...v0.4.1) (2022-12-28)
 
 
