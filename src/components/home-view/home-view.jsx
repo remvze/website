@@ -61,11 +61,12 @@ const HomeView = () => {
         </motion.h1>
 
         <motion.p variants={variants} className={styles.desc}>
-          A design-driven developer by day, dedicated to crafting practical
-          solutions with delightful experiences through simple yet elegant
-          design and scalable code. A curious mind by night, philosophizing day
-          to day life in order to make sense of it all and eventually connect
-          the dots.
+          A design-driven developer<span className={styles.orange}>✺</span>by
+          day, dedicated to crafting practical solutions with delightful
+          experiences through simple yet elegant design and scalable code. A
+          curious mind<span className={styles.indigo}>✶</span>by night,
+          philosophizing day to day life in order to make sense of it all and
+          eventually<span className={styles.green}>✼</span>connect the dots.
         </motion.p>
 
         <motion.p variants={variants} className={styles.desc}>

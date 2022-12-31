@@ -27,6 +27,52 @@
   overflow: hidden;
 }
 
+@media (max-width: 500px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+}
+
+.desc span {
+  display: inline-block;
+  margin: 0 5px;
+  animation: rotate 3s linear infinite;
+  user-select: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.orange {
+  color: #fb923c;
+}
+
+.indigo {
+  color: #818cf8;
+}
+
+.green {
+  color: #4ade80;
+}
+
+.pink {
+  color: #ec4899;
+}
+
+.red {
+  color: #f87171;
+}
+
 .projects {
   margin-top: 50px;
 }

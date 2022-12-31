@@ -35,7 +35,8 @@ const Projects = () => {
         Projects <div />
       </motion.h2>
       <motion.p variants={variants} className={styles.desc}>
-        Carefully crafted. Tastefully polished.
+        <span className={styles.pink}>✺</span>Carefully crafted.
+        <span className={styles.red}>✴</span>Tastefully polished.
       </motion.p>
 
       <div className={styles.projects}>
