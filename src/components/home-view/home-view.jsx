@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 
 import Container from '@/components/container';
 import Loader from '@/components/loader';
+import Header from '@/components/header';
 import Projects from '@/components/projects';
 
 import styles from './home-view.module.css';
@@ -23,7 +24,7 @@ const HomeView = () => {
     show: {
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.4,
+        delayChildren: 0.5,
       },
     },
   };
@@ -46,6 +47,8 @@ const HomeView = () => {
       animate="show"
       className={styles.wrapper}
     >
+      <Header />
+
       <Container>
         <motion.h1 variants={variants} className={styles.title}>
           <p>
