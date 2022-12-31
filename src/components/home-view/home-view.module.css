@@ -1,48 +1,13 @@
 .wrapper {
-  width: 100%;
-  height: auto;
-  min-height: calc(var(--vh) * 100);
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 150px 0;
+  padding: 200px 0 150px 0;
 }
 
 .title {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 34px;
+  font-weight: 500;
+  font-size: 36px;
   line-height: 1.4;
-}
-
-.title p {
-  display: inline-block;
-  background-color: #f8fafc;
-  background-image: linear-gradient(
-    -45deg,
-    transparent 33%,
-    rgba(148, 163, 184, 0.8) 55%,
-    transparent 66%
-  );
-  background-size: 300% 300%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  animation: shine 6s ease-out 3s infinite;
-}
-
-@keyframes shine {
-  0% {
-    background-position: right;
-  }
-  20%,
-  100% {
-    background-position: left;
-  }
+  margin-bottom: 20px;
 }
 
 .title span i {
@@ -52,7 +17,7 @@
 .desc {
   color: #94a3b8;
   margin-top: 15px;
-  line-height: 1.7;
+  line-height: 1.8;
   overflow: hidden;
   transition: color 0.3s;
 }
