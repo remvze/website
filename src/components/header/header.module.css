@@ -45,7 +45,7 @@
 
 .socials li a:hover {
   color: #fefefe;
-  transform: scale(1.05) translateY(-3px);
+  transform: scale(1.05);
 }
 
 .socials li:not(:first-of-type) {

@@ -10,7 +10,7 @@
   margin-bottom: 20px;
 }
 
-.title span i {
+.title i {
   font-style: italic;
 }
 
@@ -51,10 +51,11 @@
 }
 
 .desc span {
-  display: inline-block;
-  margin: 0 5px;
-  animation: rotate 3s linear infinite;
-  user-select: none;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  color: #e2e8f0;
+  margin: 0 3px;
 }
 
 @keyframes rotate {

@@ -32,11 +32,13 @@ const Projects = () => {
   return (
     <div className={styles.wrapper}>
       <motion.h2 variants={variants} className={styles.title}>
-        Projects <div />
+        <p>
+          <span>✺</span> Projects
+        </p>
+        <div />
       </motion.h2>
       <motion.p variants={variants} className={styles.desc}>
-        <span className={styles.pink}>✺</span>Carefully crafted.
-        <span className={styles.red}>✴</span>Tastefully polished.
+        Carefully crafted. Tastefully polished.
       </motion.p>
 
       <div className={styles.projects}>

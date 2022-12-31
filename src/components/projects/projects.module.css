@@ -37,20 +37,10 @@
   }
 }
 
-.desc span {
+.title span {
   display: inline-block;
-  margin: 0 5px;
-  animation: rotate 3s linear infinite;
   user-select: none;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  color: #787878;
 }
 
 .orange {

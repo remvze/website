@@ -51,22 +51,17 @@ const HomeView = () => {
 
       <Container>
         <motion.h1 variants={variants} className={styles.title}>
-          <p>
-            <span>— Developer &</span>
-            <br />
-            <span>
-              <i>Design</i> Technologist.
-            </span>
-          </p>
+          — Developer &
+          <br />
+          <i>Design</i> Technologist.
         </motion.h1>
 
         <motion.p variants={variants} className={styles.desc}>
-          A design-driven developer<span className={styles.orange}>✺</span>by
-          day, dedicated to crafting practical solutions with delightful
-          experiences through simple yet elegant design and scalable code. A
-          curious mind<span className={styles.indigo}>✶</span>by night,
-          philosophizing day to day life in order to make sense of it all and
-          eventually<span className={styles.green}>✼</span>connect the dots.
+          A <span>design-driven developer</span> by day, dedicated to crafting
+          practical solutions with delightful experiences through simple yet
+          elegant design and scalable code. A <span>curious mind</span> by
+          night, philosophizing day to day life in order to make sense of it all
+          and eventually connect the dots.
         </motion.p>
 
         <motion.p variants={variants} className={styles.desc}>
