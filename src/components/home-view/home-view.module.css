@@ -56,6 +56,7 @@
   font-size: 18px;
   color: #e2e8f0;
   margin: 0 3px;
+  line-height: 1;
 }
 
 @keyframes rotate {
