@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/remvze/website/compare/v0.5.0...v0.5.1) (2023-01-01)
+
+
+### 💄 Styling
+
+* add hover effect ([77145a7](https://github.com/remvze/website/commit/77145a7cc2aef788c6ab59c2300371e3ac50c050))
+* add symbols ([d130ea4](https://github.com/remvze/website/commit/d130ea4b7deab5e9d82e6ad6c2f0ac0caa37e0f2))
+* change font and remove symbols ([1773484](https://github.com/remvze/website/commit/1773484ab97ecac3b57b2e21b85e4ea9af5391d8))
+* change text styles ([ec1fc60](https://github.com/remvze/website/commit/ec1fc6024aac85accf368b4d8392a62c427975a5))
+* increase gap ([75d1462](https://github.com/remvze/website/commit/75d146284d55aa58ea995afc3c4959e257683ac2))
+* rotate on scroll effect ([f77b1c0](https://github.com/remvze/website/commit/f77b1c06e84a3106dcbbf848473eadbf1c7c9fae))
+
 ## [0.5.0](https://github.com/remvze/website/compare/v0.4.1...v0.5.0) (2022-12-31)
 
 
