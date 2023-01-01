@@ -78,7 +78,7 @@
 
 .projectName {
   color: #f8fafc;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
   font-family: var(--font-display);
@@ -119,7 +119,7 @@
 .projectLink {
   display: inline-flex;
   align-items: center;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -166,8 +166,8 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #f8fafc;
-  background-color: rgba(37, 99, 235, 0.4);
-  border: 1px solid #2563eb;
+  background-color: rgba(79, 70, 229, 0.4);
+  border: 1px solid #4f46e5;
   padding: 3px 13px;
   border-radius: 100px;
   margin-top: 8px;
