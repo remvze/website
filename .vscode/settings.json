@@ -6,5 +6,6 @@
     "typescript",
     "typescriptreact",
     "astro"
-  ]
+  ],
+  "editor.formatOnSave": true
 }
