@@ -1,11 +1,11 @@
 ---
 import Layout from '@/layouts/layout.astro';
 
-import Hero from '@/components/hero.astro';
-import Websites from '@/components/websites.astro';
+import { Hero } from '@/components/hero';
+import { Websites } from '@/components/websites';
 ---
 
 <Layout>
-  <Hero />
-  <Websites />
+  <Hero client:load />
+  <Websites client:load />
 </Layout>
