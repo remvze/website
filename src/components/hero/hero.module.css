@@ -21,7 +21,7 @@
   }
 
   & .founder {
-    margin-top: 6px;
+    margin-top: 8px;
     font-size: var(--font-sm);
     color: var(--color-foreground-subtle);
 
@@ -29,6 +29,22 @@
       font-weight: 500;
       color: var(--color-foreground);
       text-decoration: none;
+    }
+  }
+
+  & .socials {
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    margin-top: 24px;
+
+    & a {
+      color: var(--color-foreground-subtler);
+      transition: 0.2s;
+
+      &:hover {
+        color: var(--color-foreground);
+      }
     }
   }
 }

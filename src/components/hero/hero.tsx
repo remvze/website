@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { FaInstagram, FaGithub, FaXTwitter, FaLinkedin } from 'react-icons/fa6';
 
 import { Container } from '../container';
 
@@ -25,6 +26,29 @@ export function Hero() {
     },
   };
 
+  const socials = [
+    {
+      icon: <FaGithub />,
+      id: 'github',
+      url: 'https://github.com/remvze',
+    },
+    {
+      icon: <FaXTwitter />,
+      id: 'x (twitter)',
+      url: 'https://x.com/remvze',
+    },
+    {
+      icon: <FaInstagram />,
+      id: 'instagram',
+      url: 'https://instagram.com/remvze',
+    },
+    {
+      icon: <FaLinkedin />,
+      id: 'linkedin',
+      url: 'https://linkedin.com/in/remvze',
+    },
+  ];
+
   return (
     <Container>
       <motion.section
@@ -47,6 +71,14 @@ export function Hero() {
           </a>
           .
         </motion.p>
+
+        <motion.div className={styles.socials} variants={itemVariants}>
+          {socials.map(social => (
+            <a href={social.url} key={social.id}>
+              {social.icon}
+            </a>
+          ))}
+        </motion.div>
       </motion.section>
     </Container>
   );
