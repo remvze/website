@@ -63,7 +63,7 @@ export function Websites() {
     show: {
       opacity: 1,
       transition: {
-        delayChildren: 0.35,
+        delayChildren: 0.4,
         staggerChildren: 0.1,
       },
     },

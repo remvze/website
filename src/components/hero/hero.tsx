@@ -57,6 +57,12 @@ export function Hero() {
         initial="hidden"
         variants={containerVariants}
       >
+        <motion.img
+          alt="Maze Logo"
+          className={styles.logo}
+          src="/logo.svg"
+          variants={itemVariants}
+        />
         <motion.h1 className={styles.name} variants={itemVariants}>
           <span className={styles.muted}>re</span>Ma<sup>v</sup>ze Heart
           <span className={styles.muted}>;</span>

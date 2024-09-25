@@ -1,6 +1,12 @@
 .hero {
   padding: 120px 0 60px;
 
+  & .logo {
+    display: block;
+    width: 44px;
+    margin-bottom: 24px;
+  }
+
   & .name {
     font-family: var(--font-display);
     font-size: var(--font-xlg);
