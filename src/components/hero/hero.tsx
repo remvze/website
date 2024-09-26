@@ -11,6 +11,7 @@ export function Hero() {
     show: {
       opacity: 1,
       transition: {
+        delayChildren: 0.5,
         staggerChildren: 0.1,
       },
     },
