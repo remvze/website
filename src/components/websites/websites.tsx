@@ -27,6 +27,16 @@ export function Websites() {
       ],
     },
     {
+      title: 'Security',
+      websites: [
+        {
+          name: 'PSWD',
+          sub: 'pswd',
+          url: 'https://pswd.mvze.net',
+        },
+      ],
+    },
+    {
       title: 'Experiments',
       websites: [
         {
