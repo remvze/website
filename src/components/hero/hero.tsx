@@ -71,13 +71,6 @@ export function Hero() {
         <motion.p className={styles.desc} variants={itemVariants}>
           Programming + Philosophy.
         </motion.p>
-        <motion.p className={styles.founder} variants={itemVariants}>
-          Founder of{' '}
-          <a href="https://philosophors.com/" rel="noreferrer" target="_blank">
-            Philosophors
-          </a>
-          .
-        </motion.p>
 
         <motion.div className={styles.socials} variants={itemVariants}>
           {socials.map(social => (

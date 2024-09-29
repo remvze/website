@@ -97,6 +97,31 @@ export function Websites() {
         initial="hidden"
         variants={containerVariants}
       >
+        <section>
+          <motion.h2 variants={itemVariants}>
+            Ventures
+            <span>:</span>
+          </motion.h2>
+
+          <div className={styles.websitesWrapper}>
+            <motion.div className={styles.website} variants={itemVariants}>
+              <a href="https://philosophors.com/">Philosophors</a>
+              <div className={styles.divider} />
+              <p>
+                <span>philosophors</span>.com
+              </p>
+            </motion.div>
+
+            <motion.div className={styles.website} variants={itemVariants}>
+              <a href="https://philosophors.com/">MazeNet</a>
+              <div className={styles.divider} />
+              <p>
+                <span>mznt</span>.io
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         {websites.map(website => (
           <section key={website.title}>
             <motion.h2 variants={itemVariants}>
