@@ -113,7 +113,7 @@ export function Websites() {
             </motion.div>
 
             <motion.div className={styles.website} variants={itemVariants}>
-              <a href="https://philosophors.com/">MazeNet</a>
+              <a href="https://mznt.io/">MazeNet</a>
               <div className={styles.divider} />
               <p>
                 <span>mznt</span>.io
