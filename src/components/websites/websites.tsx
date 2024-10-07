@@ -37,6 +37,21 @@ export function Websites() {
       ],
     },
     {
+      title: 'Directories',
+      websites: [
+        {
+          name: 'Minimum',
+          sub: 'minimum',
+          url: 'https://minimum.mvze.net',
+        },
+        {
+          name: 'Night',
+          sub: 'night',
+          url: 'https://night.mvze.net',
+        },
+      ],
+    },
+    {
       title: 'Experiments',
       websites: [
         {
