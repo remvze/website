@@ -35,32 +35,101 @@ const topics = processed
 
 <Layout>
   <Container>
-    <h1>Digital Garden</h1>
+    <div class="home">
+      <div class="info">
+        <h1>Digital Garden 🌱</h1>
+        <p>
+          The digital garden of <a href="https://remvze.com/">Maze Heart</a>.
+        </p>
+      </div>
 
-    {
-      topLevelPosts.length > 0 && (
-        <>
-          <h2>Posts</h2>
-          <ul>
-            {topLevelPosts.map(({ slug, title }) => (
-              <li>
-                <a href={`/notes/${slug}`}>{title}</a>
-              </li>
-            ))}
-          </ul>
-        </>
-      )
-    }
-
-    <h2>Topics</h2>
-    <ul>
       {
-        topics.map(topic => (
-          <li>
-            <a href={`/topics/${topic}`}>/{topic}</a>
-          </li>
-        ))
+        topics.length > 0 && (
+          <div class="section">
+            <h2>Topics</h2>
+            <ul>
+              {topics.map(topic => (
+                <li>
+                  <a href={`/topics/${topic}`}>/{topic}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
       }
-    </ul>
+
+      {
+        topLevelPosts.length > 0 && (
+          <div class="section">
+            <h2>Posts</h2>
+            <ul>
+              {topLevelPosts.map(({ slug, title }) => (
+                <li>
+                  <a href={`/notes/${slug}`}>{title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </div>
   </Container>
 </Layout>
+
+<style>
+  .home {
+    padding: 120px 0;
+
+    & .info {
+      padding-bottom: 32px;
+
+      & h1 {
+        margin-bottom: 4px;
+        font-weight: 500;
+        color: var(--color-foreground);
+      }
+
+      & p {
+        font-size: var(--font-sm);
+        color: var(--color-foreground-subtle);
+
+        & a {
+          font-weight: 500;
+          color: var(--color-foreground);
+          text-decoration: underline;
+          text-decoration-style: dotted;
+          text-decoration-color: var(--color-foreground-subtler);
+        }
+      }
+    }
+
+    & .section {
+      &:not(:last-of-type) {
+        margin-bottom: 32px;
+      }
+
+      & h2 {
+        margin-bottom: 8px;
+        font-size: var(--font-sm);
+        color: var(--color-foreground-subtler);
+      }
+
+      & ul {
+        list-style-type: none;
+
+        & li {
+          &:not(:last-of-type) {
+            margin-bottom: 4px;
+          }
+
+          & a {
+            color: var(--color-foreground);
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-decoration-color: var(--color-foreground-subtler);
+          }
+        }
+      }
+    }
+  }
+</style>
