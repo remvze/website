@@ -10,6 +10,7 @@ interface Frontmatter {
 }
 
 import Layout from '@/layouts/layout.astro';
+import { Container } from '@/components/container';
 
 export function getStaticPaths() {
   const posts = import.meta.glob<MarkdownInstance<Frontmatter>>(
@@ -75,31 +76,111 @@ console.log({ subtopics, topLevelPosts });
 ---
 
 <Layout>
-  <h1>{slug}</h1>
+  <Container>
+    <div class="topic">
+      <div class="info">
+        <h1>
+          {slug.split('/').length < 2 && <a href="/">home/</a>}
+          {
+            slug.split('/').map((slugPart, index) =>
+              index === slug.split('/').length - 1 ? (
+                <span>{slugPart}</span>
+              ) : (
+                <a
+                  href={`/topics/${slug
+                    .split('/')
+                    .slice(0, index + 1)
+                    .join('/')}`}
+                >
+                  {slugPart}/
+                </a>
+              ),
+            )
+          }
+        </h1>
+      </div>
 
-  {
-    topLevelPosts.length > 0 && (
-      <>
-        <h2>Posts</h2>
-        <ul>
-          {topLevelPosts.map(({ path, post }) => (
-            <li>
-              <a href={`/notes${path}`}>{post.frontmatter.title}</a>
-            </li>
-          ))}
-        </ul>
-      </>
-    )
-  }
+      {
+        subtopics.length > 0 && (
+          <div class="section topics">
+            <h2>Topics</h2>
+            <ul>
+              {subtopics.map(topic => (
+                <li>
+                  <a href={`/topics/${topic.path}`}>/{topic.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
 
-  <h2>Topics</h2>
-  <ul>
-    {
-      subtopics.map(topic => (
-        <li>
-          <a href={`/topics/${topic.path}`}>/{topic.label}</a>
-        </li>
-      ))
-    }
-  </ul>
+      {
+        topLevelPosts.length > 0 && (
+          <div class="section notes">
+            <h2>Posts</h2>
+            <ul>
+              {topLevelPosts.map(({ path, post }) => (
+                <li>
+                  <a href={`/notes${path}`}>{post.frontmatter.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </div>
+  </Container>
 </Layout>
+
+<style>
+  .topic {
+    padding: 120px 0;
+
+    & .info {
+      padding-bottom: 32px;
+
+      & h1 {
+        font-size: var(--font-sm);
+
+        & span {
+          color: var(--color-foreground);
+        }
+
+        & a {
+          color: var(--color-foreground-subtle);
+          text-decoration: none;
+        }
+      }
+    }
+
+    & .section {
+      &:not(:last-of-type) {
+        margin-bottom: 32px;
+      }
+
+      & h2 {
+        margin-bottom: 8px;
+        font-size: var(--font-sm);
+        color: var(--color-foreground-subtler);
+      }
+
+      & ul {
+        list-style-type: none;
+
+        & li {
+          &:not(:last-of-type) {
+            margin-bottom: 4px;
+          }
+
+          & a {
+            color: var(--color-foreground);
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-decoration-color: var(--color-foreground-subtler);
+          }
+        }
+      }
+    }
+  }
+</style>
