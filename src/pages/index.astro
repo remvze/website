@@ -1,8 +1,66 @@
 ---
+import type { MarkdownInstance } from 'astro';
+
+interface Frontmatter {
+  description: string;
+  publishDate: string;
+  tags: Array<string>;
+  title: string;
+  updateDate: string;
+}
+
 import Layout from '@/layouts/layout.astro';
 import { Container } from '@/components/container';
+
+const posts = import.meta.glob<MarkdownInstance<Frontmatter>>(
+  '@/vault/**/*.md',
+  { eager: true },
+);
+
+const processed = Object.keys(posts).map(key => {
+  return {
+    slug: key.replace('/src/vault/', '').replace(/\.md$/, ''),
+    title: posts[key].frontmatter.title,
+  };
+});
+
+const topLevelPosts = processed.filter(
+  post => post.slug.split('/').length === 1,
+);
+
+const topics = processed
+  .filter(post => post.slug.split('/').length === 2)
+  .map(post => post.slug.split('/')[0]);
 ---
 
 <Layout>
-  <Container><h1>Digital Garden</h1></Container>
+  <Container>
+    <h1>Digital Garden</h1>
+
+    {
+      topLevelPosts.length > 0 && (
+        <>
+          <h2>Posts</h2>
+          <ul>
+            {topLevelPosts.map(({ slug, title }) => (
+              <li>
+                <a href={`/notes/${slug}`}>{title}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+
+    <h2>Topics</h2>
+    <ul>
+      {
+        topics.map(topic => (
+          <li>
+            <a href={`/topics/${topic}`}>/{topic}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </Container>
 </Layout>

@@ -1,0 +1,90 @@
+---
+import type { MarkdownInstance } from 'astro';
+
+interface Frontmatter {
+  description: string;
+  publishDate: string;
+  tags: Array<string>;
+  title: string;
+  updateDate: string;
+}
+
+import Layout from '@/layouts/layout.astro';
+import Markdown from '@/components/markdown.astro';
+import { Container } from '@/components/container';
+
+export async function getStaticPaths() {
+  const posts = import.meta.glob<MarkdownInstance<Frontmatter>>(
+    '@/vault/**/*.md',
+    {
+      eager: true,
+    },
+  );
+
+  return Object.keys(posts).map(path => {
+    const slug = path.replace('/src/vault/', '').replace(/\.md$/, '');
+
+    return {
+      params: { slug },
+      props: {
+        Content: posts[path].Content,
+        back: {
+          label:
+            slug.split('/').length > 1 ? slug.split('/').slice(-2)[0] : 'home',
+          path:
+            slug.split('/').length > 1
+              ? '/topics/' + slug.split('/').slice(0, -1).join('/')
+              : '/',
+        },
+        frontmatter: posts[path].frontmatter,
+      },
+    };
+  });
+}
+
+const { Content, back, frontmatter } = Astro.props;
+---
+
+<Layout>
+  <Container>
+    <article class="article">
+      <div class="info">
+        <a href={back.path}>/{back.label}</a>
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.description}</p>
+      </div>
+
+      <Markdown>
+        <Content />
+      </Markdown>
+    </article>
+  </Container>
+</Layout>
+
+<style>
+  .article {
+    padding: 120px 0;
+
+    & .info {
+      padding-bottom: 32px;
+
+      & a {
+        display: block;
+        margin-bottom: 16px;
+        font-size: var(--font-xsm);
+        color: var(--color-foreground-subtler);
+      }
+
+      & h1 {
+        margin-bottom: 4px;
+        font-weight: 500;
+        color: var(--color-foreground);
+      }
+
+      & p {
+        font-size: var(--font-sm);
+        color: var(--color-foreground-subtle);
+      }
+    }
+  }
+</style>

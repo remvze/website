@@ -1,0 +1,105 @@
+---
+import type { MarkdownInstance } from 'astro';
+
+interface Frontmatter {
+  description: string;
+  publishDate: string;
+  tags: Array<string>;
+  title: string;
+  updateDate: string;
+}
+
+import Layout from '@/layouts/layout.astro';
+
+export function getStaticPaths() {
+  const posts = import.meta.glob<MarkdownInstance<Frontmatter>>(
+    '@/vault/**/*.md',
+    { eager: true },
+  );
+
+  const allPaths = Object.keys(posts).map(path =>
+    path.replace('/src/vault/', ''),
+  );
+  const topicPaths = new Set<string>();
+
+  allPaths.forEach(path => {
+    const segments = path.split('/');
+    for (let i = 1; i < segments.length; i++) {
+      topicPaths.add(segments.slice(0, i).join('/'));
+    }
+  });
+
+  return Array.from(topicPaths).map(topicPath => ({
+    params: { slug: topicPath },
+    props: {
+      posts: Object.keys(posts)
+        .filter(postPath => postPath.startsWith(`/src/vault/${topicPath}`))
+        .map(postPath => ({ path: postPath, post: posts[postPath] })),
+    },
+  }));
+}
+
+const { slug } = Astro.params;
+const { posts } = Astro.props;
+
+const computeRelativePath = (fullPath: string, slug: string) =>
+  fullPath.replace(`/src/vault/${slug}`, '');
+
+const postsWithRelative = posts.map(({ path, post }) => ({
+  post,
+  relativePath: computeRelativePath(path, slug),
+}));
+
+const topLevelPosts = postsWithRelative
+  .filter(({ relativePath }) => {
+    const segments = relativePath.split('/').slice(1);
+
+    return segments.length === 1 && relativePath.endsWith('.md');
+  })
+  .map(({ post, relativePath }) => ({
+    path: `/${slug}${relativePath.replace(/\.md$/, '')}`,
+    post,
+  }));
+
+const subtopics = postsWithRelative
+  .filter(({ relativePath }) => {
+    const segments = relativePath.split('/').slice(1);
+    return segments.length === 2;
+  })
+  .map(({ relativePath }) => {
+    const [, topic] = relativePath.split('/');
+    return { label: topic, path: `${slug}/${topic}` };
+  });
+
+console.log({ subtopics, topLevelPosts });
+---
+
+<Layout>
+  <h1>{slug}</h1>
+
+  {
+    topLevelPosts.length > 0 && (
+      <>
+        <h2>Posts</h2>
+        <ul>
+          {topLevelPosts.map(({ path, post }) => (
+            <li>
+              <a href={`/notes${path}`}>{post.frontmatter.title}</a>
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+
+  <h2>Topics</h2>
+  <ul>
+    {
+      subtopics.map(topic => (
+        <li>
+          <a href={`/topics/${topic.path}`}>/{topic.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>
