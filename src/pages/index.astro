@@ -28,19 +28,21 @@ const topLevelPosts = processed.filter(
   post => post.slug.split('/').length === 1,
 );
 
-const topics = processed
-  .filter(post => post.slug.split('/').length === 2)
-  .map(post => post.slug.split('/')[0]);
+const topics = [
+  ...new Set(
+    processed
+      .filter(post => post.slug.split('/').length === 2)
+      .map(post => post.slug.split('/')[0]),
+  ),
+];
 ---
 
 <Layout>
   <Container>
     <div class="home">
       <div class="info">
-        <h1>Digital Garden 🌱</h1>
-        <p>
-          The digital garden of <a href="https://remvze.com/">Maze Heart</a>.
-        </p>
+        <h1>Maze Heart 🌱</h1>
+        <p>My personal digital graden.</p>
       </div>
 
       {

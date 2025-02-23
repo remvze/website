@@ -62,15 +62,22 @@ const topLevelPosts = postsWithRelative
     post,
   }));
 
-const subtopics = postsWithRelative
-  .filter(({ relativePath }) => {
-    const segments = relativePath.split('/').slice(1);
-    return segments.length === 2;
-  })
-  .map(({ relativePath }) => {
-    const [, topic] = relativePath.split('/');
-    return { label: topic, path: `${slug}/${topic}` };
-  });
+const subtopics = [
+  ...new Set(
+    postsWithRelative
+      .filter(({ relativePath }) => {
+        const segments = relativePath.split('/').slice(1);
+        return segments.length === 2;
+      })
+      .map(({ relativePath }) => {
+        const [, topic] = relativePath.split('/');
+
+        return topic;
+      }),
+  ),
+].map(topic => {
+  return { label: topic, path: `${slug}/${topic}` };
+});
 
 console.log({ subtopics, topLevelPosts });
 ---
