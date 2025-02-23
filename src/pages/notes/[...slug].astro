@@ -52,6 +52,9 @@ const { Content, back, frontmatter } = Astro.props;
         <a href={back.path}>/{back.label}</a>
         <h1>{frontmatter.title}</h1>
         <p>{frontmatter.description}</p>
+        <div class="tags">
+          {frontmatter.tags && frontmatter.tags.map(tag => <span>#{tag}</span>)}
+        </div>
       </div>
 
       <Markdown>
@@ -84,6 +87,19 @@ const { Content, back, frontmatter } = Astro.props;
       & p {
         font-size: var(--font-sm);
         color: var(--color-foreground-subtle);
+      }
+
+      & .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+
+        & span {
+          display: block;
+          font-size: var(--font-xsm);
+          color: var(--color-foreground-subtler);
+        }
       }
     }
   }
