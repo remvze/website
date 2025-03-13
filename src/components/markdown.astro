@@ -22,6 +22,7 @@
       &::before {
         display: inline-block;
         margin-right: 4px;
+        font-family: var(--font-mono);
         font-weight: 400;
         color: var(--color-foreground-subtler);
       }
@@ -62,6 +63,15 @@
       text-decoration-color: var(--color-foreground-subtler);
     }
 
+    & strong {
+      font-weight: 500;
+      color: var(--color-foreground);
+    }
+
+    & em {
+      font-style: italic;
+    }
+
     & blockquote {
       padding: 0.5em 1em;
       margin: 1em 0;
@@ -94,7 +104,7 @@
 
     & code {
       padding: 0.2em 0.4em;
-      font-family: 'Source Code Pro', monospace;
+      font-family: var(--font-mono);
       font-size: 0.9em;
       color: var(--color-foreground);
       background-color: var(--color-neutral-300);

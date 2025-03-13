@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content'; // eslint-disable-line
 
 import Layout from '@/layouts/layout.astro';
 import Markdown from '@/components/markdown.astro';
+import { Container } from '@/components/container';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -17,6 +18,16 @@ const { Content } = await render(post);
 ---
 
 <Layout>
-  <h1>{post.data.title}</h1>
-  <Markdown><Content /></Markdown>
+  <Container>
+    <h1 class="title">{post.data.title}</h1>
+    <Markdown><Content /></Markdown>
+  </Container>
 </Layout>
+
+<style>
+  .title {
+    font-family: var(--font-serif);
+    font-size: var(--font-lg);
+    font-weight: 500;
+  }
+</style>

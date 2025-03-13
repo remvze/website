@@ -3,8 +3,17 @@
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/inter-v13-latin-regular.woff2') format('woff2');
-  font-display: swap;
+  src: url('/fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+}
+
+/* inter-italic - latin */
+@font-face {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/inter-v18-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 
 /* inter-500 - latin */
@@ -12,42 +21,87 @@
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
-  src: url('/fonts/inter-v13-latin-500.woff2') format('woff2');
-  font-display: swap;
+  src: url('/fonts/inter-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 
-/* lora-regular - latin */
+/* inter-500italic - latin */
 @font-face {
-  font-family: Lora;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 500;
+  src: url('/fonts/inter-v18-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+}
+
+/* eb-garamond-regular - latin */
+@font-face {
+  font-family: 'EB Garamond';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/lora-v35-latin-regular.woff2') format('woff2');
-  font-display: swap;
+  src: url('/fonts/eb-garamond-v30-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 
-/* space-mono-regular - latin */
+/* eb-garamond-italic - latin */
 @font-face {
-  font-family: 'Space Mono';
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/eb-garamond-v30-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+}
+
+/* eb-garamond-500 - latin */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/eb-garamond-v30-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+}
+
+/* eb-garamond-500italic - latin */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 500;
+  src: url('/fonts/eb-garamond-v30-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+}
+
+/* ibm-plex-mono-regular - latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/space-mono-v13-latin-regular.woff2') format('woff2');
-  font-display: swap;
+  src: url('/fonts/ibm-plex-mono-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
 
-/* space-mono-700 - latin */
+/* ibm-plex-mono-italic - latin */
 @font-face {
-  font-family: 'Space Mono';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/fonts/space-mono-v13-latin-700.woff2') format('woff2');
-  font-display: swap;
-}
-
-/* instrument-serif-regular - latin */
-@font-face {
-  font-family: 'Instrument Serif';
-  font-style: normal;
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
   font-weight: 400;
-  src: url('/fonts/instrument-serif-v4-latin-regular.woff2') format('woff2');
-  font-display: swap;
+  src: url('/fonts/ibm-plex-mono-v19-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+}
+
+/* ibm-plex-mono-500 - latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/ibm-plex-mono-v19-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+}
+
+/* ibm-plex-mono-500italic - latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 500;
+  src: url('/fonts/ibm-plex-mono-v19-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 }
