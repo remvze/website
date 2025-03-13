@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content'; // eslint-disable-line
+
+import Layout from '@/layouts/layout.astro';
+import Markdown from '@/components/markdown.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout>
+  <h1>{post.data.title}</h1>
+  <Markdown><Content /></Markdown>
+</Layout>
