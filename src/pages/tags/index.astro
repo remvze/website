@@ -7,7 +7,9 @@ import { Container } from '@/components/container';
 import Hero from '@/components/hero.astro';
 
 const posts = await getCollection('blog');
-const tags = [...posts.map(post => post.data.tags).flat()].sort(alphaSort());
+const tags = [...new Set(posts.map(post => post.data.tags).flat())].sort(
+  alphaSort(),
+);
 ---
 
 <Layout>
