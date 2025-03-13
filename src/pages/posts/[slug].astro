@@ -18,12 +18,11 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Layout description={post.data.description} title={post.data.title}>
+<Layout description={post.data.title} title={post.data.title}>
   <Container>
     <section class="hero">
       <a class="home" href="/">~ Home 🏡</a>
       <h1 class="title">{post.data.title}</h1>
-      <p class="description">{post.data.description}</p>
 
       <div class="tags">
         {post.data.tags.map(tag => <a href={`/tags/${tag}`}>#{tag}</a>)}
@@ -43,15 +42,9 @@ const { Content } = await render(post);
     padding: 120px 0 40px;
 
     & .title {
-      margin-bottom: 4px;
       font-family: var(--font-serif);
       font-size: var(--font-lg);
       font-weight: 500;
-    }
-
-    & .description {
-      line-height: 1.5;
-      color: var(--color-foreground-subtle);
     }
 
     & .tags {

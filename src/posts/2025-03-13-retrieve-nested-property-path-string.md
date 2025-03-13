@@ -1,8 +1,6 @@
 ---
-title: 'Retrieve Nested Property in JavaScript'
-description: 'Retrieve nested property using path string in JavaScript.'
+title: 'Retrieve Nested Object Values Using Dot-Separated Path in JavaScript'
 publishDate: '2025-03-13'
-updateDate: '2025-03-13'
 tags: ['javascript']
 ---
 
