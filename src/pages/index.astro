@@ -2,13 +2,75 @@
 import { getCollection } from 'astro:content'; // eslint-disable-line
 
 import Layout from '@/layouts/layout.astro';
+import { Container } from '@/components/container';
+
+import { formatDate } from '@/helpers/date';
+import { reverseArray } from '@/helpers/array';
 
 const posts = await getCollection('blog');
+const reversedPosts = reverseArray(posts);
 ---
 
 <Layout>
-  <h1>Hello World</h1>
-  <ul>
-    {posts.map(post => <li>{post.data.title}</li>)}
-  </ul>
+  <Container>
+    <section class="hero">
+      <h1>Maze Heart</h1>
+      <p>Welcome to my personal blog!</p>
+    </section>
+
+    <ul class="posts">
+      {
+        reversedPosts.map(post => (
+          <li>
+            <span class="date">
+              [{formatDate(new Date(post.data.publishDate))}]
+            </span>{' '}
+            <a href={`/posts/${post.id}`}>{post.data.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </Container>
 </Layout>
+
+<style>
+  .hero {
+    padding: 120px 0 60px;
+
+    & h1 {
+      margin-bottom: 4px;
+      font-family: var(--font-serif);
+      font-size: var(--font-xlg);
+      font-weight: 500;
+    }
+
+    & p {
+      color: var(--color-foreground-subtle);
+    }
+  }
+
+  .posts {
+    padding-bottom: 120px;
+    list-style-type: none;
+
+    & li {
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+
+      & .date {
+        font-family: var(--font-mono);
+        font-size: var(--font-xsm);
+        color: var(--color-foreground-subtler);
+      }
+
+      & a {
+        font-weight: 500;
+        color: var(--color-foreground);
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: var(--color-foreground-subtler);
+      }
+    }
+  }
+</style>
