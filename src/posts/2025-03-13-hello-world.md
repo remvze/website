@@ -1,6 +1,6 @@
 ---
 title: 'Hello, World!'
-description: 'The first post on this blog'
+description: 'The first post on this blog.'
 publishDate: '2025-03-13'
 updateDate: '2025-03-13'
 tags: ['hello-world']
