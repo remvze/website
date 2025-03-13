@@ -1,8 +1,8 @@
 ---
 title: 'Hello World'
 description: 'The very first post!'
-publishDate: '2024-02-09'
-updateDate: '2024-02-09'
+publishDate: '2025-01-01'
+updateDate: '2025-01-01'
 tags: ['hello-world', 'bye']
 ---
 

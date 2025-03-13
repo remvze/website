@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content'; // eslint-disable-line
+import alphaSort from 'alpha-sort';
+
+import Layout from '@/layouts/layout.astro';
+import { Container } from '@/components/container';
+import Hero from '@/components/hero.astro';
+
+const posts = await getCollection('blog');
+const tags = [...posts.map(post => post.data.tags).flat()].sort(alphaSort());
+---
+
+<Layout>
+  <Container>
+    <Hero
+      backAddress="/"
+      backLabel="Home 🏡"
+      description="Explore posts by tags."
+      title="Tags"
+    />
+
+    <section class="tags">
+      {tags.map(tag => <a href={`/tags/${tag}`}>#{tag}</a>)}
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    & a {
+      display: block;
+      padding: 8px 12px;
+      font-family: var(--font-mono);
+      font-size: var(--font-sm);
+      color: var(--color-foreground-subtle);
+      text-decoration: none;
+      background: linear-gradient(
+        var(--color-neutral-50),
+        var(--color-neutral-100)
+      );
+      border: 1px solid var(--color-neutral-100);
+      border-radius: 50px;
+      box-shadow: inset 0 -1px 0 var(--color-neutral-200);
+    }
+  }
+</style>

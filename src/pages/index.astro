@@ -4,11 +4,19 @@ import { getCollection } from 'astro:content'; // eslint-disable-line
 import Layout from '@/layouts/layout.astro';
 import { Container } from '@/components/container';
 
-import { formatDate } from '@/helpers/date';
-import { reverseArray } from '@/helpers/array';
+import Posts from '@/components/posts.astro';
 
 const posts = await getCollection('blog');
-const reversedPosts = reverseArray(posts);
+const sortedPosts = posts.sort(
+  (a, b) =>
+    new Date(b.data.publishDate).getTime() -
+    new Date(a.data.publishDate).getTime(),
+);
+const normalizedPosts = sortedPosts.map(post => ({
+  date: post.data.publishDate,
+  id: post.id,
+  title: post.data.title,
+}));
 ---
 
 <Layout>
@@ -18,24 +26,13 @@ const reversedPosts = reverseArray(posts);
       <p>👨‍💻 Code. 🎨 Design. 📚 Wisdom.</p>
     </section>
 
-    <ul class="posts">
-      {
-        reversedPosts.map(post => (
-          <li>
-            <span class="date">
-              [{formatDate(new Date(post.data.publishDate))}]
-            </span>{' '}
-            <a href={`/posts/${post.id}`}>{post.data.title}</a>
-          </li>
-        ))
-      }
-    </ul>
+    <Posts posts={normalizedPosts} />
   </Container>
 </Layout>
 
 <style>
   .hero {
-    padding: 120px 0 60px;
+    padding: 120px 0 40px;
 
     & h1 {
       margin-bottom: 4px;
@@ -46,31 +43,6 @@ const reversedPosts = reverseArray(posts);
 
     & p {
       color: var(--color-foreground-subtle);
-    }
-  }
-
-  .posts {
-    padding-bottom: 120px;
-    list-style-type: none;
-
-    & li {
-      &:not(:last-of-type) {
-        margin-bottom: 8px;
-      }
-
-      & .date {
-        font-family: var(--font-mono);
-        font-size: var(--font-xsm);
-        color: var(--color-foreground-subtler);
-      }
-
-      & a {
-        font-weight: 500;
-        color: var(--color-foreground);
-        text-decoration: underline;
-        text-decoration-style: dotted;
-        text-decoration-color: var(--color-foreground-subtler);
-      }
     }
   }
 </style>

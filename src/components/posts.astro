@@ -1,0 +1,51 @@
+---
+import { formatDate } from '@/helpers/date';
+
+interface Props {
+  posts: Array<{
+    date: string;
+    id: string;
+    title: string;
+  }>;
+}
+
+const { posts } = Astro.props;
+---
+
+<ul class="posts">
+  {
+    posts.map(post => (
+      <li>
+        <span class="date">[{formatDate(new Date(post.date))}]</span>{' '}
+        <a href={`/posts/${post.id}`}>{post.title}</a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .posts {
+    padding-bottom: 120px;
+    list-style-type: none;
+
+    & li {
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+
+      & .date {
+        font-family: var(--font-mono);
+        font-size: var(--font-xsm);
+        color: var(--color-foreground-subtler);
+      }
+
+      & a {
+        font-weight: 500;
+        color: var(--color-foreground);
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: var(--color-foreground-subtler);
+      }
+    }
+  }
+</style>
