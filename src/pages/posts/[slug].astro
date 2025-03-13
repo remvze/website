@@ -4,6 +4,7 @@ import { getCollection, render } from 'astro:content'; // eslint-disable-line
 import Layout from '@/layouts/layout.astro';
 import Markdown from '@/components/markdown.astro';
 import { Container } from '@/components/container';
+import { formatDate } from '@/helpers/date';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -19,15 +20,56 @@ const { Content } = await render(post);
 
 <Layout>
   <Container>
-    <h1 class="title">{post.data.title}</h1>
-    <Markdown><Content /></Markdown>
+    <section class="hero">
+      <a class="home" href="/">~ Home</a>
+      <h1 class="title">{post.data.title}</h1>
+      <p class="description">{post.data.description}</p>
+      <p class="date">[{formatDate(new Date(post.data.publishDate))}]</p>
+    </section>
+
+    <section class="content">
+      <Markdown><Content /></Markdown>
+    </section>
   </Container>
 </Layout>
 
 <style>
-  .title {
-    font-family: var(--font-serif);
-    font-size: var(--font-lg);
-    font-weight: 500;
+  .hero {
+    padding: 120px 0 40px;
+
+    & .title {
+      margin-bottom: 4px;
+      font-family: var(--font-serif);
+      font-size: var(--font-lg);
+      font-weight: 500;
+    }
+
+    & .description {
+      color: var(--color-foreground-subtle);
+    }
+
+    & .date {
+      margin-top: 16px;
+      font-family: var(--font-mono);
+      font-size: var(--font-xsm);
+      color: var(--color-foreground-subtler);
+    }
+
+    & .home {
+      display: block;
+      margin-bottom: 16px;
+      font-family: var(--font-mono);
+      font-size: var(--font-xsm);
+      font-weight: 500;
+      color: var(--color-foreground-subtler);
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: var(--color-foreground-subtler);
+      text-transform: uppercase;
+    }
+  }
+
+  .content {
+    padding-bottom: 120px;
   }
 </style>
