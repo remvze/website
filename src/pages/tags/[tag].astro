@@ -43,12 +43,12 @@ const normalizedPosts = sortedPosts.map(post => ({
 }));
 ---
 
-<Layout>
+<Layout description={`Posts tagged with #${tag}.`} title={`#${tag}`}>
   <Container>
     <Hero
       backAddress="/tags"
       backLabel="Tags 🔖"
-      description={`Posts tagged with #${tag}`}
+      description={`Posts tagged with #${tag}.`}
       title={`#${tag}`}
     />
     <Posts posts={normalizedPosts} />

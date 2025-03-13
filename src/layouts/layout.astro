@@ -8,11 +8,10 @@ interface Props {
 }
 
 const title = Astro.props.title
-  ? `${Astro.props.title} — Maze's Digital Garden`
-  : 'Maze\'s Digital Garden';
+  ? `${Astro.props.title} — Maze Heart`
+  : 'Maze Heart: Code. Design. Wisdom.';
 
-const description =
-  Astro.props.description || 'My personal knowledge base.';
+const description = Astro.props.description || 'My personal knowledge base.';
 
 const og = Astro.props.og || '/og.png';
 ---
@@ -33,9 +32,9 @@ const og = Astro.props.og || '/og.png';
     <meta content={title} property="og:title" />
     <meta content={description} property="og:description" />
     <meta content="The Progress" property="og:site_name" />
-    <meta content="https://garden.mvze.net/" property="og:url" />
+    <meta content="https://remvze.com/" property="og:url" />
     <meta content="website" property="og:type" />
-    <meta content={`https://garden.mvze.net${og}`} property="og:image" />
+    <meta content={`https://remvze.com${og}`} property="og:image" />
 
     <link href="/sitemap-index.xml" rel="sitemap" />
   </head>

@@ -18,7 +18,7 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Layout>
+<Layout description={post.data.description} title={post.data.title}>
   <Container>
     <section class="hero">
       <a class="home" href="/">~ Home 🏡</a>
