@@ -1,7 +1,7 @@
 ---
 title: "Mastering JavaScript's reduce() Method"
 publishDate: '2025-03-14'
-tags: ['javascript']
+tags: ['javascript', 'array-methods']
 ---
 
 The `reduce` method in JavaScript is used to iterate over an array and reduce it to a single value (such as a sum, product, or object). It accepts a callback function with two primary arguments: an accumulator (which stores the running result) and the current element being processed. The method can also accept an initial value for the accumulator. The callback function executes for each element, updating the accumulator based on the provided logic.
