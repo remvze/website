@@ -5,10 +5,4 @@ updateDate: '2025-05-25'
 tags: ['philosophy', 'ethics']
 ---
 
-The Categorical Imperative, a central concept in the ethical philosophy of Immanuel Kant, urges individuals to act according to principles they would want everyone else to follow universally.
-
-One key formulation, the Formula of Universal Law, advises acting only by rules that could become universal laws without contradiction or undermining one's own rational will. This involves testing if the maxim behind an action would still be possible or desirable if everyone acted on it.
-
-Another important formulation, the Formula of Humanity as End in Itself, emphasizes treating all people, including oneself, as having inherent worth and never merely as tools to achieve a goal.
-
-This ethical framework is deontological, focusing on the inherent rightness or wrongness of actions based on moral rules, rather than their consequences. It posits a necessary and universally binding moral law derived from reason, guiding individuals to act out of duty and respect for the dignity of all rational beings.
+The Categorical Imperative is a principle in moral philosophy that provides a test for determining whether an action is morally right. It states that one should act only according to rules that could be followed by everyone at all times. This principle is unconditional and applies to all people regardless of their goals or desires. It contrasts with hypothetical imperatives, which apply only if a person wants a specific outcome. The Categorical Imperative has three main formulations: acting only on maxims that could become universal laws, treating others always as ends and never merely as means, and acting as if helping to create moral laws for a society where everyone is treated as equals. To evaluate a rule, one checks for contradictions that would make it impossible or irrational if followed universally. These contradictions reveal either perfect duties, such as not lying, or imperfect duties, like helping others. The principle is based on reason, not consequences or feelings, and assumes that moral actions come from autonomy—choosing to follow moral laws through rational thought. It also emphasizes the inherent worth of all individuals, who must be respected as rational beings capable of moral decision-making.
