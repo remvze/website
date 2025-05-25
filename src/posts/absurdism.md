@@ -2,10 +2,26 @@
 title: 'Absurdism'
 publishDate: '2025-05-25'
 updateDate: '2025-05-25'
-tags: ['philosophy']
+tags: ['philosophy', 'absurdism']
 ---
 
-Absurdism is the view that humans naturally seek meaning in life, but the universe offers no clear or inherent answers, creating a conflict known as the absurd. This condition arises from the tension between the human desire for purpose and the world’s apparent indifference. Absurdism holds that this conflict cannot be resolved through logic, belief systems, or denial, and instead must be faced directly. Common responses include escape through illusions, despair, or acceptance. The preferred response in Absurdism is to accept the absurd without giving in to false hope or hopelessness, continuing to live with clarity and awareness. This leads to what is called absurd freedom—the realization that, without fixed meaning, individuals are free to choose their own values and actions. The absurd depends on human consciousness, as it emerges from our reflective awareness rather than the world itself. Unlike nihilism, which often dismisses meaning entirely, or existentialism, which encourages individuals to create their own meaning, Absurdism emphasizes honest living without illusion or final answers. It encourages active engagement with life, finding value in personal choice and everyday experiences despite the lack of ultimate justification.
+## TL;DR:
+
+Absurdism is the view that humans seek meaning in a universe that offers none, creating a conflict known as the Absurd. Rather than turning to belief or despair, it encourages us to acknowledge this tension and live fully despite it. Revolt means embracing life with honesty and freedom, without illusions. Unlike existentialism or nihilism, Absurdism finds value in living consciously without relying on ultimate meaning.
+
+---
+
+Absurdism is the philosophical view that humans seek meaning and purpose in life, but the universe offers no inherent or definitive answers. This tension between our desire for understanding and the indifference of the world gives rise to a conflict known as the Absurd.
+
+Common responses to the Absurd include turning to belief systems that promise meaning (such as religion or ideology), surrendering to despair or nihilism, or accepting life’s lack of inherent meaning and continuing to live regardless. Absurdism supports the third path: living in full awareness of the Absurd, without reliance on comforting illusions.
+
+This approach centers on revolt—the conscious choice to live fully and authentically despite the absence of ultimate meaning. Revolt involves affirming life without appealing to a higher order, embracing freedom, honesty, and the reality of our condition.
+
+Absurdism differs from existentialism, which argues that individuals can create meaning through freedom and choice, and from nihilism, which sees life as inherently meaningless and often not worth engaging with.
+
+By contrast, Absurdism maintains that although no inherent meaning exists, we should not fall into despair. Instead, we should live with awareness of the Absurd. If we choose to create personal meaning, we must do so with the understanding that it is entirely subjective and does not resolve the underlying conflict.
+
+The Absurd hero is someone who, in confronting the absence of cosmic or divine purpose, creates their own values through action and personal choice. Rather than succumbing to despair, they live with clarity, courage, and an honest acceptance of reality.
 
 ---
 
