@@ -33,6 +33,13 @@ const { Content } = await render(post);
 
     <section class="content">
       <Markdown><Content /></Markdown>
+
+      <div class="disclaimer">
+        <strong>⚠️ Disclaimer:</strong> This entry is part of my digital garden—an
+        evolving collection of notes and ideas. It&apos;s not meant to be exhaustive
+        or final, but rather a snapshot of my current understanding. Expect rough
+        edges, and feel free to explore further!
+      </div>
     </section>
   </Container>
 </Layout>
@@ -93,5 +100,19 @@ const { Content } = await render(post);
 
   .content {
     padding-bottom: 120px;
+
+    & .disclaimer {
+      padding: 16px;
+      margin-top: 32px;
+      line-height: 1.6;
+      color: var(--color-foreground-subtle);
+      background: var(--color-neutral-100);
+      border: 1px solid var(--color-neutral-200);
+
+      & strong {
+        font-weight: 500;
+        color: var(--color-foreground);
+      }
+    }
   }
 </style>
