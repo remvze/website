@@ -26,3 +26,10 @@ The concept also emphasizes how institutions can separate decision-making from c
 Arendt argued that preventing such outcomes requires individuals to exercise moral judgment, reflect critically on their actions, and resist passive obedience. The true danger, she insisted, does not lie in individual wickedness alone, but in the widespread absence of critical thinking—when people stop questioning what they are doing and lose their ability to judge right from wrong.
 
 It is important to note that Arendt did not suggest the banality of evil excuses, justifies, or minimizes the harm caused by such actions. She maintained that even seemingly ordinary individuals who commit wrongdoing remain morally and legally responsible. While some readers may misinterpret the concept as implying reduced guilt, Arendt was clear that the banality of evil refers to the form evil can take—not its severity or consequences.
+
+---
+
+## Further Reading
+
+- [Eichmann in Jerusalem — Wikipedia](https://en.wikipedia.org/wiki/Eichmann_in_Jerusalem)
+- [What did Hannah Arendt really mean by the banality of evil? — Aeon](https://aeon.co/ideas/what-did-hannah-arendt-really-mean-by-the-banality-of-evil)
