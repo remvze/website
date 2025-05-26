@@ -28,4 +28,3 @@ Paraconsistent systems are useful in domains where inconsistencies may arise nat
 ## Further Reading
 
 - [Principle of explosion — Wikipedia](https://en.wikipedia.org/wiki/Principle_of_explosion)
-- [Principle of explosion — RationalWiki](https://rationalwiki.org/wiki/Principle_of_explosion)
