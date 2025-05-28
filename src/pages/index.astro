@@ -23,7 +23,9 @@ const normalizedPosts = sortedPosts.map(post => ({
   <Container>
     <section class="hero">
       <h1>Maze Heart</h1>
-      <p>My Digital Garden. 🌱</p>
+      <p class="desc">My Digital Garden. 🌱</p>
+      <p class="tagline">Complex ideas, simply explained.</p>
+      <p class="acronym">(ELI5 = Explain Like I&apos;m 5)</p>
     </section>
 
     <Posts posts={normalizedPosts} />
@@ -41,8 +43,19 @@ const normalizedPosts = sortedPosts.map(post => ({
       font-weight: 500;
     }
 
-    & p {
+    & .desc {
       color: var(--color-foreground-subtle);
+    }
+
+    & .tagline {
+      margin-top: 32px;
+      color: var(--color-foreground-subtle);
+    }
+
+    & .acronym {
+      margin-top: 8px;
+      font-size: var(--font-sm);
+      color: var(--color-foreground-subtler);
     }
   }
 </style>
