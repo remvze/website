@@ -2,7 +2,7 @@
 title: 'ELI5: The Symbolic in Lacanian Psychoanalysis'
 publishDate: '2025-05-27'
 updateDate: '2025-05-27'
-tags: ['psychology', 'psychoanalysis']
+tags: ['psychology', 'psychoanalysis', 'lacanian-psychoanalysis']
 ---
 
 In Lacanian psychoanalysis, the Symbolic is like the world of words, rules, and meanings that we all share so we can talk to each other and understand how things work. It’s how we learn to say “I” and call people “Mom” or “Teacher” instead of just seeing them as people who feed us or teach us. When we start using language, we enter the Symbolic order, which means we’re becoming part of a bigger system that shapes who we are.

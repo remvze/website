@@ -2,7 +2,7 @@
 title: 'ELI5: The Imaginary in Lacanian Psychoanalysis'
 publishDate: '2025-05-27'
 updateDate: '2025-05-27'
-tags: ['psychology', 'psychoanalysis']
+tags: ['psychology', 'psychoanalysis', 'lacanian-psychoanalysis']
 ---
 
 In Lacanian psychoanalysis, the Imaginary is like the mind’s picture world—it’s where we first start to understand who we are by looking at images, especially how we see ourselves and others. Think about a baby looking into a mirror. The baby sees a full image and thinks, “That’s me!” Even though they can’t control their body yet, this mirror moment helps them build their ego, which is their idea of themselves. This is called the Mirror Stage.

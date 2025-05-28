@@ -2,7 +2,7 @@
 title: 'ELI5: Lacanian Psychoanalysis'
 publishDate: '2025-05-27'
 updateDate: '2025-05-27'
-tags: ['psychology', 'psychoanalysis']
+tags: ['psychology', 'psychoanalysis', 'lacanian-psychoanalysis']
 ---
 
 Lacanian psychoanalysis is a way of understanding how our minds work, especially the parts we don’t notice — called the unconscious. A big idea is that the unconscious is structured like a language, which means it follows patterns, like grammar, and shows up in how we speak, dream, or make mistakes.
@@ -22,6 +22,7 @@ And the Name-of-the-Father is a fancy term for the rules that tell us we can’t
 - [Mirror Stage in Lacanian Psychoanalysis](/posts/mirror-stage-in-lacanian-psychoanalysis)
 - [The Imaginary in Lacanian Psychoanalysis](/posts/the-imaginary-in-lacanian-psychoanalysis)
 - [The Symbolic in Lacanian Psychoanalysis](/posts/the-symbolic-in-lacanian-psychoanalysis)
+- [The Real in Lacanian Psychoanalysis](/posts/the-real-in-lacanian-psychoanalysis)
 
 ---
 

@@ -2,7 +2,7 @@
 title: 'ELI5: Mirror Stage in Lacanian Psychoanalysis'
 publishDate: '2025-05-27'
 updateDate: '2025-05-27'
-tags: ['psychology', 'psychoanalysis']
+tags: ['psychology', 'psychoanalysis', 'lacanian-psychoanalysis']
 ---
 
 The Mirror Stage is an idea from Lacanian psychoanalysis that explains how a baby starts to build a sense of “self.” Around 6 to 18 months old, a baby sees its reflection in a mirror and recognizes it as “me.” This makes the baby feel excited, like it has found a whole version of itself.
