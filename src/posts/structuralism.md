@@ -14,3 +14,7 @@ Structuralism says we understand things—like language, stories, or even cultur
 Structuralists look for binary oppositions (like good vs. evil or light vs. dark) that help organize meaning. The main idea is that we don’t just invent meaning on our own—our thoughts, words, and customs all follow structures we’re part of.
 
 So structuralism helps us see the bigger picture behind the things we usually take for granted.
+
+## Further Reading
+
+- [Structuralism — Wikipedia](https://en.wikipedia.org/wiki/Structuralism)
