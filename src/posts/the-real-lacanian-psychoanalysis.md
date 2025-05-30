@@ -1,5 +1,5 @@
 ---
-title: 'ELI5: The Real in Lacanian Psychoanalysis'
+title: 'ELI5: The Real (Lacanian Psychoanalysis)'
 publishDate: '2025-05-28'
 updateDate: '2025-05-28'
 tags: ['psychology', 'psychoanalysis', 'lacanian-psychoanalysis']

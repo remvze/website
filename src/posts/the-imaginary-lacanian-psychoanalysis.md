@@ -1,5 +1,5 @@
 ---
-title: 'ELI5: The Imaginary in Lacanian Psychoanalysis'
+title: 'ELI5: The Imaginary (Lacanian Psychoanalysis)'
 publishDate: '2025-05-27'
 updateDate: '2025-05-27'
 tags: ['psychology', 'psychoanalysis', 'lacanian-psychoanalysis']
