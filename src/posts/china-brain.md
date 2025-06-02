@@ -2,7 +2,7 @@
 title: 'ELI5: China Brain'
 publishDate: '2025-06-01'
 updateDate: '2025-06-01'
-tags: ['philosophy', 'consciousness']
+tags: ['philosophy', 'consciousness', 'philosophy-of-mind']
 ---
 
 Imagine your brain is like a giant team where each worker is a neuron — a tiny cell that sends signals to other neurons. These signals help you think, feel, and be aware, which we call **consciousness**. Now, the China Brain is a thought experiment where we pretend that every person in China acts like one neuron. Each person sends and receives messages, just like real neurons do, following the same rules your brain uses. The big question is: _if they do this perfectly, would the whole system be conscious, like a giant brain with thoughts and feelings?_
