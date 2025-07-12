@@ -16,7 +16,7 @@ const tags = [...new Set(posts.map(post => post.data.tags).flat())].sort(
   <Container>
     <Hero
       backAddress="/"
-      backLabel="Home 🏡"
+      backLabel="Home"
       description="Explore posts by tags."
       title="Tags"
     />
@@ -31,22 +31,14 @@ const tags = [...new Set(posts.map(post => post.data.tags).flat())].sort(
   .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
 
     & a {
       display: block;
-      padding: 8px 12px;
       font-family: var(--font-mono);
       font-size: var(--font-sm);
       color: var(--color-foreground-subtle);
       text-decoration: none;
-      background: linear-gradient(
-        var(--color-neutral-50),
-        var(--color-neutral-100)
-      );
-      border: 1px solid var(--color-neutral-100);
-      border-radius: 50px;
-      box-shadow: inset 0 -1px 0 var(--color-neutral-200);
     }
   }
 </style>

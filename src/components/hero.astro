@@ -10,7 +10,7 @@ const { backAddress, backLabel, description, title } = Astro.props;
 ---
 
 <section class="hero">
-  <a class="back" href={backAddress}>~ {backLabel}</a>
+  <a class="back" href={backAddress}>({backLabel})</a>
   <h1 class="title">{title}</h1>
   <p class="description">{description}</p>
 </section>
@@ -21,8 +21,6 @@ const { backAddress, backLabel, description, title } = Astro.props;
 
     & .title {
       margin-bottom: 4px;
-      font-family: var(--font-serif);
-      font-size: var(--font-lg);
       font-weight: 500;
     }
 
@@ -33,14 +31,10 @@ const { backAddress, backLabel, description, title } = Astro.props;
     & .back {
       display: block;
       margin-bottom: 16px;
-      font-family: var(--font-mono);
       font-size: var(--font-xsm);
       font-weight: 500;
       color: var(--color-foreground-subtler);
-      text-decoration: underline;
-      text-decoration-style: dotted;
-      text-decoration-color: var(--color-foreground-subtler);
-      text-transform: uppercase;
+      text-decoration: none;
     }
   }
 </style>
