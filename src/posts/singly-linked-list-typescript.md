@@ -32,7 +32,7 @@ class SinglyLinkedList<T> {
 
   // Check if the list is empty
   isEmpty() {
-    return this.length === 0;
+    return !this.head;
   }
 
   // Get the size of the list
