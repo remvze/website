@@ -206,7 +206,7 @@ container.register<ILoggerService>('ILoggerService', {
 });
 ```
 
-Or use `Symbol()` to avoid typos in token strings:
+Or use `Symbol()` to create unique, collision-resistant tokens that are safer and easier to maintain than plain strings:
 
 ```typescript
 export const TOKENS = {
@@ -228,7 +228,7 @@ import { ILoggerService } from './logger.interface';
 
 @injectable()
 export class UserService {
-  constructor(@inject(TOKENS.ILoggerService) private logger: ILoggerService) {}
+  constructor(@inject('ILoggerService') private logger: ILoggerService) {}
 
   createUser(name: string) {
     this.logger.log(`Creating user: ${name}`);
