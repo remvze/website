@@ -159,3 +159,81 @@ If you registered `LoggerService` using a string token, you would also inject it
 ```typescript
 container.register('LoggerService', { useValue: mockLogger });
 ```
+
+---
+
+## Using Interfaces with TSyringe
+
+In large applications, relying on interfaces instead of concrete classes makes your code more flexible and testable. However, due to TypeScript's limitations, TSyringe cannot resolve interfaces automatically — they don’t exist at runtime, so reflection metadata won’t capture them.
+
+### Why Use Interfaces?
+
+Because it decouples abstractions from implementations; it makes your classes depend on contracts, not concrete classes. It's also easier to test and mock, and it supports multiple implementations, allowing you to switch behaviors at runtime or in different environments.
+
+### How to Use Interfaces with TSyringe?
+
+Since interfaces can’t be reflected at runtime, you must use tokens when injecting them. These can be strings, symbols, or InjectionToken objects.
+
+#### 1. Define the interface
+
+```typescript
+export interface ILoggerService {
+  log(message: string): void;
+}
+```
+
+#### 2. Implement the interface
+
+```typescript
+import { injectable } from 'tsyringe';
+import { ILoggerService } from './logger.interface';
+
+@injectable()
+export class LoggerService implements ILoggerService {
+  log(message: string) {
+    console.log(`[LOG]: ${message}`);
+  }
+}
+```
+
+#### 3. Register the implementation using a token
+
+Use a string as a token:
+
+```typescript
+container.register<ILoggerService>('ILoggerService', {
+  useClass: LoggerService,
+});
+```
+
+Or use `Symbol()` to avoid typos in token strings:
+
+```typescript
+export const TOKENS = {
+  ILoggerService: Symbol('ILoggerService'),
+};
+
+container.register<ILoggerService>(TOKENS.ILoggerService, {
+  useClass: LoggerService,
+});
+```
+
+#### 4. Inject the interface using the token
+
+Use the `@inject()` decorator with the same token:
+
+```typescript
+import { injectable, inject } from 'tsyringe';
+import { ILoggerService } from './logger.interface';
+
+@injectable()
+export class UserService {
+  constructor(@inject(TOKENS.ILoggerService) private logger: ILoggerService) {}
+
+  createUser(name: string) {
+    this.logger.log(`Creating user: ${name}`);
+  }
+}
+```
+
+You **must** use `@inject()` when injecting interfaces as TSyringe can't infer them like it can with classes.
