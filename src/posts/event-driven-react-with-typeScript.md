@@ -7,16 +7,23 @@ tags: ['typescript', 'react', 'frontend']
 
 ## Why Event-Driven React?
 
-In traditional React apps, components communicate by passing props or using context. This works well in small apps, but as your app grows, it can lead to tight coupling, prop drilling, and tangled logic between unrelated parts of the UI.
+In traditional React applications, data flows top-down through props or context. This pattern works well in small to medium apps, where components are closely related and the data flow is predictable.
 
-**Event-driven design** offers a cleaner solution.
+But as applications grow, so does complexity. You might encounter:
 
-**Event-driven design** is a pattern where components communicate by emitting and listening to named events, without needing to know about each other directly.
+- **Prop drilling**: passing props through multiple layers just to reach a nested component.
+- **Tight coupling**: components relying on shared context or having direct knowledge of each other.
+- **Scattered logic**: when unrelated components need to react to the same event, updates become harder to coordinate and test.
 
-Think of it like a **publish/subscribe** system:
+**Event-driven design** offers a decoupled alternative.
 
-- One component emits an event (e.g., `user:clicked`)
-- Other components listen for that event and respond accordingly
+It’s a pattern where components communicate through **named events**, not through props or tightly-coupled state. This is similar to the **publish/subscribe** (pub/sub) model:
+
+- A component emits an event (`'user:clicked'`, for example)
+- One or many components listen and react to that event
+- None of the components need to know about each other directly
+
+This makes cross-cutting concerns like logging, analytics, toasts, or UI coordination cleaner to implement.
 
 ---
 
@@ -195,4 +202,16 @@ Toggle light/dark mode from anywhere in the app:
 eventBus.emit('theme:toggle', { theme: 'dark' });
 ```
 
-A top-level layout or theme provider listens for this event and updates the UI accordingly.
+A top-level layout or theme provider listens for this event and updates the UI state or theme context accordingly.
+
+---
+
+## Trade-Offs to Consider
+
+Event-driven design is powerful, but not a silver bullet. It introduces:
+
+- **Indirection**: behavior can feel “magical” or hard to trace, especially in large apps.
+- **Debugging difficulty**: it’s not always obvious who is emitting or listening.
+- **State sync risks**: relying entirely on events for app state can lead to race conditions or missed updates.
+
+Use it _thoughtfully_: for cross-cutting concerns or loosely-related behaviors, not as a full replacement for props, context, or state management.
