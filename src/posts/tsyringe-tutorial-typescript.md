@@ -34,15 +34,15 @@ And import `reflect-metadata` **once**, typically in your entry file:
 import 'reflect-metadata';
 ```
 
-## Define Your Services
+---
 
-Let's define a simple logger service and a user service that depends on it.
+## Basic Usage
 
-`logger.service.ts`:
+### 1. Define a service
+
+This is a simple logger service. It will be injected into other classes. We use `@injectable()` to make `LoggerService` injectable.
 
 ```typescript
-import { injectable } from 'tsyringe';
-
 @injectable()
 export class LoggerService {
   log(message: string) {
@@ -51,88 +51,111 @@ export class LoggerService {
 }
 ```
 
-`user.service.ts`:
+### 2. Register the service
+
+Here, we tell TSyringe to associate a **token** with the `LoggerService` class. This token can be a string (like `'LoggerService'`), a symbol, or even the class constructor itself.
+
+```typescript
+import { container } from 'tsyringe';
+
+import { LoggerService } from './logger.service';
+
+container.register('LoggerService', { useClass: LoggerService });
+```
+
+In this example, we're using a string token, which works fine — but TSyringe also supports using the class itself as the token:
+
+```typescript
+container.register(LoggerService, { useClass: LoggerService });
+```
+
+Using the class as the token has the advantage of being type-safe and less error-prone than using strings, especially in large codebases.
+
+### 3. Inject it into another class
+
+We use `@inject()` to request `LoggerService`.
 
 ```typescript
 import { injectable, inject } from 'tsyringe';
 
-import { LoggerService } from './logger.service';
-
 @injectable()
-export class UserService {
+class UserService {
   constructor(@inject('LoggerService') private logger: LoggerService) {}
 
   createUser(name: string) {
-    this.logger.log(`User ${name} created`);
+    this.logger.log(`Creating user: ${name}`);
   }
 }
 ```
 
-The `@injectable()` decorator tells TSyringe that the class can be managed by the container.
-
-### Why use `@inject('LoggerService')`?
-
-When using string tokens for dependencies, you must explicitly tell TSyringe how to resolve them. This allows for flexibility, such as swapping in mock or alternate implementations at runtime.
-
-## Register and Resolve Dependencies
-
-`main.ts`:
-
-```typescript
-import 'reflect-metadata';
-import { container } from 'tsyringe';
-
-import { LoggerService } from './logger.service';
-import { UserService } from './user.service';
-
-// Register services by string token
-container.register<LoggerService>('LoggerService', { useClass: LoggerService });
-container.register<UserService>('UserService', { useClass: UserService });
-
-// Resolve and use
-const userService = container.resolve<UserService>('UserService');
-
-userService.createUser('Alice');
-```
-
-## Alternative: Use Class as Token (No Strings)
-
-TSyringe also supports using classes directly as tokens. This avoids string-based registration:
+If you registered `LoggerService` using the class as the token, you can inject it without `@inject()` — TSyringe will infer the type using reflection metadata:
 
 ```typescript
 @injectable()
 export class UserService {
   constructor(private logger: LoggerService) {}
+
+  createUser(name: string) {
+    this.logger.log(`Creating user: ${name}`);
+  }
 }
-
-// Register without strings
-container.register<LoggerService>(LoggerService, { useClass: LoggerService });
-container.register<UserService>(UserService, { useClass: UserService });
-
-const userService = container.resolve(UserService);
-userService.createUser('Bob');
 ```
 
-## Testing Using Mocks
+This is cleaner and fully type-safe, as long as all types are properly decorated and registered.
 
-TSyringe makes it easy to inject mocks during tests.
+### 4. Resolve and use the class
+
+Use the container to resolve `UserService`. TSyringe will automatically:
+
+- Inspect the constructor of `UserService`
+- See that it depends on `LoggerService`
+- Inject the registered implementation of `LoggerService`
+
+```typescript
+const userService = container.resolve(UserService);
+
+userService.createUser('Alice');
+```
+
+Note that you didn't have to register `UserService` first, that's because TSyringe can resolve classes decorated with `@injectable()` automatically, as long as **all their dependencies are registered**.
+
+---
+
+## Mocking and Overriding Dependencies for Unit Testing
+
+One of the biggest advantages of using a dependency injection container like **TSyringe** is the ability to easily swap out real implementations with mocks or stubs during testing.
+
+### Overriding a dependency
+
+To override a registered dependency in a test, you can call `container.register()` again before resolving the class under test:
+
+**Using a class as the token**:
 
 ```typescript
 import { container } from 'tsyringe';
 import { UserService } from './user.service';
+import { LoggerService } from './logger.service';
 
-// Create a mock logger
-const mockLogger = { log: vi.fn() };
+const mockLogger = {
+  log: jest.fn(),
+};
 
-// Register mock instead of real service
-container.register('LoggerService', { useValue: mockLogger });
+// Override LoggerService with the mock
+container.register(LoggerService, { useValue: mockLogger });
 
-const userService = container.resolve<UserService>('UserService');
-
+const userService = container.resolve(UserService);
 userService.createUser('Test');
 
-// Assert the logger was used
-expect(mockLogger.log).toHaveBeenCalledWith('User Test created');
+// Assert that the logger was called
+expect(mockLogger.log).toHaveBeenCalledWith('Creating user: Test');
 ```
 
-This pattern works well for unit testing with tools like **Vitest** or **Jest**.
+This approach is type-safe and avoids hardcoded strings. It pairs naturally with constructor injection that relies on type reflection (i.e., when no `@inject()` is used).
+
+**Using a string token**:
+
+If you registered `LoggerService` using a string token, you would also inject it with `@inject('LoggerService')` and override it like this:
+
+```typescript
+container.register('LoggerService', { useValue: mockLogger });
+```
