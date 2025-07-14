@@ -28,7 +28,7 @@ const { bookmarks } = Astro.props;
                   : 'var(--color-neutral-700)',
           }}
         />
-        <span class="index">[{padNumber(index + 1, 5)}]</span>
+        <span class="index">[{padNumber(bookmarks.length - index, 5)}]</span>
         <a href={bookmark.url} rel="noreferrer" target="_blank">
           {bookmark.title}
         </a>
