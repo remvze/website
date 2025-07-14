@@ -1,0 +1,79 @@
+---
+import { padNumber } from '@/helpers/number';
+
+interface Props {
+  bookmarks: Array<{
+    date: string;
+    title: string;
+    type: 'video' | 'article' | 'other';
+    url: string;
+  }>;
+}
+
+const { bookmarks } = Astro.props;
+---
+
+<ul class="posts">
+  {
+    bookmarks.map((bookmark, index) => (
+      <li>
+        <span
+          class="dot"
+          style={{
+            backgroundColor:
+              bookmark.type === 'article'
+                ? '#a3e635'
+                : bookmark.type === 'video'
+                  ? '#6366f1'
+                  : 'var(--color-neutral-700)',
+          }}
+        />
+        <span class="index">[{padNumber(index + 1, 5)}]</span>
+        <a href={bookmark.url} rel="noreferrer" target="_blank">
+          {bookmark.title}
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .posts {
+    padding-bottom: 120px;
+    list-style-type: none;
+
+    & li {
+      display: flex;
+      column-gap: 8px;
+      align-items: baseline;
+      line-height: 1.6;
+
+      &:not(:last-of-type) {
+        margin-bottom: 8px;
+      }
+
+      & .dot {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: var(--color-neutral-700);
+        border-radius: 50%;
+      }
+
+      & .index {
+        font-family: var(--font-mono);
+        font-size: var(--font-sm);
+        color: var(--color-foreground-subtler);
+        text-wrap: nowrap;
+      }
+
+      & a {
+        font-weight: 500;
+        color: var(--color-foreground);
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: var(--color-foreground-subtler);
+      }
+    }
+  }
+</style>

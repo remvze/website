@@ -24,6 +24,7 @@ const normalizedPosts = sortedPosts.map(post => ({
     <section class="hero">
       <h1>Maze Heart</h1>
       <p class="desc">Writing about programming.</p>
+      <a href="/bookmarks">(Bookmarks)</a>
     </section>
 
     <Posts posts={normalizedPosts} />
@@ -41,6 +42,15 @@ const normalizedPosts = sortedPosts.map(post => ({
 
     & .desc {
       color: var(--color-foreground-subtle);
+    }
+
+    & a {
+      display: block;
+      margin-top: 16px;
+      font-size: var(--font-xsm);
+      font-weight: 500;
+      color: var(--color-foreground-subtler);
+      text-decoration: none;
     }
   }
 </style>
