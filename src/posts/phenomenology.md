@@ -1,7 +1,7 @@
 ---
 title: 'What is Phenomenology?'
 publishDate: '2025-09-03'
-updateDate: '2025-09-03'
+updateDate: '2025-09-04'
 tags: ['philosophy', 'phenomenology']
 ---
 
