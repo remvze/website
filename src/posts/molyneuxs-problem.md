@@ -2,7 +2,7 @@
 title: "What is the Molyneux's Problem?"
 publishDate: '2025-09-05'
 updateDate: '2025-09-05'
-tags: ['psychology', 'thought-experiment']
+tags: ['philosophy', 'thought-experiment']
 ---
 
 **Molyneux's problem** raises an interesting question: would a person born blind, who learns to tell the difference between objects like cubes and spheres using touch, be able to identify those same objects just by looking at them if they suddenly gained sight?

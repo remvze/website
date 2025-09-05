@@ -2,7 +2,7 @@
 title: "What is the Hanlon's Razor?"
 publishDate: '2025-09-05'
 updateDate: '2025-09-05'
-tags: ['psychology', 'philosophical-razor']
+tags: ['philosophy', 'philosophical-razor']
 ---
 
 **Hanlon's razor** is a simple yet useful rule of thumb: don't assume **bad intentions** when someone's actions can just as easily be explained by a **lack of understanding** or **carelessness**.
