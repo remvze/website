@@ -20,3 +20,13 @@ As a result, it’s especially hard to automate jobs that require **common sense
 While computers have taken over many routine tasks that are fairly simple to codify, jobs requiring **abstract thinking** or **flexible manual skills** remain more resistant to automation.
 
 This is because the necessary know-how usually isn’t something we can fully explain or program.
+
+---
+
+## Online Resources
+
+- [Polanyi's paradox](https://en.wikipedia.org/wiki/Polanyi%27s_paradox) / Wikipedia
+
+---
+
+> **Please Note**: This is my personal summary of the topic, shared both for my own records and in the hope it may be helpful to you. AI was used in parts to assist with the process.

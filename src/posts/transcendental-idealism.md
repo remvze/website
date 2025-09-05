@@ -18,3 +18,15 @@ This approach is called **transcendental** because it goes beyond simply reporti
 From this standpoint, Kant argued that we can have genuine scientific knowledge about **appearances** as they are shaped by our minds, but not about the **ultimate reality** that exists beyond them.
 
 This bold claim sparked long-running debates. Critics, such as defenders of **naïve realism**, insisted that we perceive the world exactly as it is, independent of our minds. Others built on Kant’s insights, offering new interpretations and adaptations that continue to shape philosophy today.
+
+---
+
+## Online Resources
+
+- [Transcendental idealism](https://en.wikipedia.org/wiki/Transcendental_idealism) / Wikipedia
+- [Kant’s Transcendental Idealism](https://plato.stanford.edu/entries/kant-transcendental-idealism/) / SEP
+- [Immanuel Kant: Transcendental Idealism](https://iep.utm.edu/kant-transcendental-idealism/) / IEP
+
+---
+
+> **Please Note**: This is my personal summary of the topic, shared both for my own records and in the hope it may be helpful to you. AI was used in parts to assist with the process.

@@ -20,3 +20,14 @@ And the last nonproductive orientation, **the Marketing orientation**, is for pe
 The fifth and final orientation is the only **productive orientation** that represents a healthy personality. People with this orientation embrace **freedom** and **responsibility**: they don't hide behind a _**"mask."**_
 
 While an individual's character is a **blend** of these orientations, one is typically more **dominant** than the others.
+
+---
+
+## Online Resources
+
+- [Character orientation](https://en.wikipedia.org/wiki/Character_orientation) / Wikipedia
+- [Erich Fromm](https://en.wikipedia.org/wiki/Erich_Fromm) / Wikipedia
+
+---
+
+> **Please Note**: This is my personal summary of the topic, shared both for my own records and in the hope it may be helpful to you. AI was used in parts to assist with the process.

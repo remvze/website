@@ -16,3 +16,14 @@ Experiments with people who gained vision after being blind **support** this ide
 **Philosophers** and **scientists** continue to discuss whether there’s a **natural connection** between our senses, or if this connection is built through experience.
 
 Recent studies have even tested this idea with **animals** like chickens, finding evidence that some ability to link touch and sight might exist right away in certain species.
+
+---
+
+## Online Resources
+
+- [Molyneux's problem](https://en.wikipedia.org/wiki/Molyneux%27s_problem) / Wikipedia
+- [Molyneux's problem](https://plato.stanford.edu/entries/molyneux-problem/) / SEP
+
+---
+
+> **Please Note**: This is my personal summary of the topic, shared both for my own records and in the hope it may be helpful to you. AI was used in parts to assist with the process.

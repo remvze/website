@@ -18,3 +18,13 @@ Other writers, such as **George Bernard Shaw**, observed that features admired i
 However, **Shaw** also criticized the process when people attempted to copy **unrealistic** or **overly romanticized** art.
 
 The debate around life imitating art is tied to broader philosophical discussions between **Romanticism** (emphasizing imagination and emotion) and **Realism** (focusing on accurate depiction of life), with roots traceable to older traditions in literature and thought.
+
+---
+
+## Online Resources
+
+- [Life imitating art](https://en.wikipedia.org/wiki/Life_imitating_art) / Wikipedia
+
+---
+
+> **Please Note**: This is my personal summary of the topic, shared both for my own records and in the hope it may be helpful to you. AI was used in parts to assist with the process.

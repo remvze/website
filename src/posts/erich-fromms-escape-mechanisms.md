@@ -16,3 +16,13 @@ Second is _**“authoritarianism,”**_ where someone gives up control over thei
 The third escape is _**“destructiveness,”**_ where a person reacts to the pressure of freedom by wanting to destroy others or the world, hoping that by doing so they can avoid being crushed by it themselves.
 
 These escape mechanisms help people avoid the anxiety of making choices but come at the cost of losing their **true self** and healthy relationship with freedom.
+
+---
+
+## Online Resources
+
+- [Erich Fromm](https://en.wikipedia.org/wiki/Erich_Fromm) / Wikipedia
+
+---
+
+> **Please Note**: This is my personal summary of the topic, shared both for my own records and in the hope it may be helpful to you. AI was used in parts to assist with the process.

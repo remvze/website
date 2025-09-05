@@ -20,3 +20,13 @@ It also predicts that as the forces of production (such as technology) develop, 
 The goal is to replace **capitalism** with **socialism**, where resources are owned cooperatively, production is based on people's needs instead of profit, and the state, once used to protect the rich, eventually disappears in a transition to a **classless, communist society**.
 
 **Marxism’s** ideas have evolved into different schools of thought. It has also greatly influenced fields like **sociology**, **history**, **education**, and even **art and literature**, as well as major political movements and revolutions around the world.
+
+---
+
+## Online Resources
+
+- [Marxism](https://en.wikipedia.org/wiki/Marxism) / Wikipedia
+
+---
+
+> **Please Note**: This is my personal summary of the topic, shared both for my own records and in the hope it may be helpful to you. AI was used in parts to assist with the process.

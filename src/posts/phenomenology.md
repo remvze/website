@@ -16,3 +16,15 @@ A central idea in **phenomenology** is **intentionality**, which means every act
 **Phenomenology** also deals with concepts like the **lifeworld** (the personal and shared world we all live in as a background to our experiences), **empathy** (understanding others’ experiences), and **intersubjectivity** (how objectivity arises from shared experience).
 
 From philosophy to the social sciences and even architecture, phenomenology aims to directly describe the structures of **experience**, enriching our understanding of how meaning arises for conscious beings.
+
+---
+
+## Online Resources
+
+- [Phenomenology (philosophy)](<https://en.wikipedia.org/wiki/Phenomenology_(philosophy)>) / Wikipedia
+- [Phenomenology](https://plato.stanford.edu/entries/phenomenology/) / SEP
+- [Phenomenology](https://iep.utm.edu/phenom/) / IEP
+
+---
+
+> **Please Note**: This is my personal summary of the topic, shared both for my own records and in the hope it may be helpful to you. AI was used in parts to assist with the process.

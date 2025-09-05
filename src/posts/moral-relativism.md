@@ -18,3 +18,15 @@ Key to **moral relativism** is the rejection of **universal standards** that app
 This can mean that actions seen as right in one culture may be wrong in another, and there’s no independent standard to say one is better than the other.
 
 Critics argue that this makes it hard to resolve **moral disagreements** or even have meaningful discussions about right and wrong, while defenders point to the wide variety of beliefs and practices found around the world as evidence for their view.
+
+---
+
+## Online Resources
+
+- [Moral relativism](https://en.wikipedia.org/wiki/Moral_relativism) / Wikipedia
+- [Moral Relativism](https://plato.stanford.edu/entries/moral-relativism/) / SEP
+- [Moral Relativism](https://iep.utm.edu/moral-re/) / IEP
+
+---
+
+> **Please Note**: This is my personal summary of the topic, shared both for my own records and in the hope it may be helpful to you. AI was used in parts to assist with the process.

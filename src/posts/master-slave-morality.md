@@ -22,3 +22,14 @@ The very traits the powerful admire become **"evil,"** while humility, kindness,
 Over time, **Nietzsche** argues, **slave morality** became dominant in Western culture, especially through **Christianity** and democratic movements, which promote ideas of universal human worth and freedom.
 
 In this way, every society's view of right and wrong reflects a struggle between these two moral outlooks and the groups that support them.
+
+---
+
+## Online Resources
+
+- [Master–slave morality](https://en.wikipedia.org/wiki/Master%E2%80%93slave_morality) / Wikipedia
+- [The master and slave moralities: what Nietzsche really meant](https://bigthink.com/personal-growth/the-master-and-slave-moralities-what-nietzsche-really-meant/) / Big Think
+
+---
+
+> **Please Note**: This is my personal summary of the topic, shared both for my own records and in the hope it may be helpful to you. AI was used in parts to assist with the process.
