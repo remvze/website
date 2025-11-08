@@ -9,9 +9,10 @@ interface Props {
 
 const title = Astro.props.title
   ? `${Astro.props.title} — Maze Heart`
-  : 'Maze Heart: Personal Digital Garden';
+  : 'Maze Heart: Independent Design Engineer';
 
-const description = Astro.props.description || 'My personal knowledge base.';
+const description =
+  Astro.props.description || 'An independent design engineer.';
 
 const og = Astro.props.og || '/og.png';
 ---

@@ -1,56 +1,248 @@
 ---
-import { getCollection } from 'astro:content'; // eslint-disable-line
+import { MdArrowOutward } from 'react-icons/md';
 
 import Layout from '@/layouts/layout.astro';
 import { Container } from '@/components/container';
 
-import Posts from '@/components/posts.astro';
+const links = [
+  {
+    title: 'GitHub',
+    url: 'https://github.com/remvze',
+  },
+  {
+    title: 'X (Twitter)',
+    url: 'https://x.com/remvze',
+  },
+  {
+    title: 'LinkedIn',
+    url: 'https://linkedin.com/in/remvze',
+  },
+];
 
-const posts = await getCollection('blog');
-const sortedPosts = posts.sort(
-  (a, b) =>
-    new Date(b.data.publishDate).getTime() -
-    new Date(a.data.publishDate).getTime(),
-);
-const normalizedPosts = sortedPosts.map(post => ({
-  date: post.data.publishDate,
-  id: post.id,
-  title: post.data.title,
-}));
+const experiences = [
+  {
+    date: '2022–Present',
+    description: '☾ My independent creative practice.',
+    name: '19—57',
+    role: 'Founder',
+  },
+  {
+    date: '2021–Present',
+    description: '✱ For those who seek wisdom.',
+    name: 'Philosophors',
+    role: 'Founder',
+  },
+];
+
+const projects = [
+  {
+    description: 'Your open-source project.',
+    link: 'https://opn.bio',
+    name: 'OPN',
+  },
+  {
+    description: 'Ambient sounds for focus and calm.',
+    link: 'https://moodist.mvze.net',
+    name: 'Moodist',
+  },
+  {
+    description: 'Simply do nothing and just be.',
+    link: 'https://usenothing.com',
+    name: 'Nothing',
+  },
+  {
+    description: 'Minimal websites directory.',
+    link: 'https://mnmm.xyz',
+    name: 'Minimum',
+  },
+];
 ---
 
 <Layout>
   <Container>
     <section class="hero">
       <h1>Maze Heart</h1>
-      <p class="desc">My personal digital garden.</p>
-      <a href="/bookmarks">(Bookmarks)</a>
+      <p>Design Engineer.</p>
     </section>
 
-    <Posts posts={normalizedPosts} />
+    <section class="about">
+      <h2>About</h2>
+      <p>
+        I’m an independent design engineer who designs through code. I care
+        deeply about crafting elegant, intuitive user interfaces while writing
+        clean, scalable code.
+      </p>
+      <div class="links">
+        {links.map(link => <a href={link.url}>{link.title}</a>)}
+      </div>
+    </section>
+
+    <section class="experience">
+      <h2>Experience</h2>
+      <ul>
+        {
+          experiences.map(exp => (
+            <li>
+              <p class="title">
+                <strong>{exp.name}</strong> • {exp.role}
+              </p>
+              <p class="description">{exp.description}</p>
+              <p class="date">{exp.date}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <ul>
+        {
+          projects.map(project => (
+            <li>
+              <a href={project.link}>
+                {project.name}{' '}
+                <span>
+                  <MdArrowOutward />
+                </span>
+              </a>
+              <p>{project.description}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
   </Container>
 </Layout>
 
 <style>
   .hero {
-    padding: 120px 0 40px;
+    padding: 160px 0 80px;
 
     & h1 {
       margin-bottom: 4px;
       font-weight: 500;
     }
 
-    & .desc {
+    & p {
+      font-size: var(--font-sm);
+      color: var(--color-foreground-subtle);
+    }
+  }
+
+  .about {
+    margin-bottom: 80px;
+
+    & h2 {
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+
+    & p {
+      line-height: 1.6;
       color: var(--color-foreground-subtle);
     }
 
-    & a {
-      display: block;
-      margin-top: 16px;
-      font-size: var(--font-xsm);
+    & .links {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+
+      & a {
+        font-size: var(--font-sm);
+        color: var(--color-foreground);
+        text-decoration: underline;
+        text-decoration-color: var(--color-foreground-subtler);
+        text-underline-offset: 4px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .experience {
+    margin-bottom: 80px;
+
+    & h2 {
+      margin-bottom: 32px;
       font-weight: 500;
-      color: var(--color-foreground-subtler);
-      text-decoration: none;
+    }
+
+    & ul {
+      list-style: none;
+
+      & li {
+        &:not(:last-of-type) {
+          margin-bottom: 40px;
+        }
+
+        & .title {
+          margin-bottom: 4px;
+          color: var(--color-foreground-subtle);
+
+          & strong {
+            font-weight: 500;
+            color: var(--color-foreground);
+          }
+        }
+
+        & .description {
+          margin-bottom: 4px;
+          line-height: 1.6;
+          color: var(--color-foreground-subtle);
+        }
+
+        & .date {
+          font-size: var(--font-sm);
+          color: var(--color-foreground-subtler);
+        }
+      }
+    }
+  }
+
+  .projects {
+    padding-bottom: 160px;
+
+    & h2 {
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+
+    & ul {
+      list-style: none;
+
+      & li {
+        &:not(:last-of-type) {
+          margin-bottom: 40px;
+        }
+
+        & a {
+          display: inline-flex;
+          column-gap: 4px;
+          align-items: center;
+          margin-bottom: 4px;
+          font-weight: 500;
+          color: var(--color-foreground);
+          text-decoration: none;
+
+          &:hover {
+            & span {
+              transform: translate(1px, -1px);
+            }
+          }
+
+          & span {
+            font-size: var(--font-sm);
+            line-height: 0;
+            color: var(--color-foreground-subtler);
+            transition: 0.2s;
+          }
+        }
+
+        & p {
+          line-height: 1.6;
+          color: var(--color-foreground-subtle);
+        }
+      }
     }
   }
 </style>
